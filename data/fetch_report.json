@@ -1,23 +1,23 @@
 {
   "indexes": {
     "ok": true,
-    "at": "2026-09-23T02:54:06",
-    "seconds": 48.8,
+    "at": "2026-09-23T04:30:46",
+    "seconds": 114.7,
     "info": {
       "csi300": {
-        "source": "eastmoney",
-        "rows": 4063,
-        "last": "2026-09-23"
+        "source": "tencent",
+        "rows": 4062,
+        "last": "2026-09-22"
       },
       "csi1000": {
-        "source": "eastmoney",
-        "rows": 4063,
-        "last": "2026-09-23"
+        "source": "tencent",
+        "rows": 2904,
+        "last": "2026-09-22"
       },
       "sse": {
-        "source": "eastmoney",
-        "rows": 4063,
-        "last": "2026-09-23"
+        "source": "tencent",
+        "rows": 4062,
+        "last": "2026-09-22"
       },
       "szse": {
         "source": "tencent",
@@ -28,18 +28,18 @@
   },
   "asset": {
     "ok": true,
-    "at": "2026-09-23T02:54:08",
-    "seconds": 1.5,
+    "at": "2026-09-23T04:30:48",
+    "seconds": 1.4,
     "info": {
       "source": "eastmoney-hfq",
-      "rows": 3484,
-      "last": "2026-09-23"
+      "rows": 3483,
+      "last": "2026-09-22"
     }
   },
   "qvix": {
     "ok": true,
-    "at": "2026-09-23T02:54:21",
-    "seconds": 13.0,
+    "at": "2026-09-23T04:31:04",
+    "seconds": 16.5,
     "info": {
       "source": "optbbs-300etf",
       "rows": 1629,
@@ -48,8 +48,8 @@
   },
   "margin": {
     "ok": true,
-    "at": "2026-09-23T02:54:33",
-    "seconds": 12.1,
+    "at": "2026-09-23T04:31:20",
+    "seconds": 16.0,
     "info": {
       "source": "eastmoney-all",
       "rows": 3396,
@@ -58,8 +58,8 @@
   },
   "valuation": {
     "ok": true,
-    "at": "2026-09-23T02:54:42",
-    "seconds": 9.1,
+    "at": "2026-09-23T04:31:28",
+    "seconds": 7.3,
     "info": {
       "erp": {
         "source": "legulegu",
@@ -78,8 +78,8 @@
   },
   "high_low": {
     "ok": true,
-    "at": "2026-09-23T02:54:43",
-    "seconds": 1.3,
+    "at": "2026-09-23T04:31:30",
+    "seconds": 2.3,
     "info": {
       "source": "legulegu",
       "rows": 500,
@@ -88,8 +88,8 @@
   },
   "market_flow": {
     "ok": true,
-    "at": "2026-09-23T02:54:44",
-    "seconds": 1.3,
+    "at": "2026-09-23T04:31:31",
+    "seconds": 1.5,
     "info": {
       "source": "eastmoney",
       "rows": 120,
@@ -98,54 +98,52 @@
   },
   "etf_daily": {
     "ok": true,
-    "at": "2026-09-23T02:56:11",
-    "seconds": 86.3,
+    "at": "2026-09-23T04:34:03",
+    "seconds": 151.7,
     "info": {
       "per_code": {
         "510300": "sina",
-        "510310": "eastmoney",
-        "510330": "eastmoney",
-        "159919": "eastmoney",
-        "510050": "eastmoney",
+        "510310": "sina",
+        "510330": "sina",
+        "159919": "sina",
+        "510050": "sina",
         "510500": "sina",
-        "159922": "eastmoney",
-        "512100": "eastmoney",
-        "159845": "eastmoney",
+        "159922": "sina",
+        "512100": "sina",
+        "159845": "sina",
         "588000": "sina",
-        "588080": "eastmoney",
-        "159915": "eastmoney"
+        "588080": "sina",
+        "159915": "sina"
       },
-      "rows": 34384,
-      "last": "2026-09-23"
+      "rows": 35561,
+      "last": "2026-09-22"
     }
   },
   "etf_shares": {
     "ok": true,
-    "at": "2026-09-23T03:15:21",
-    "seconds": 1150.1,
+    "at": "2026-09-23T04:50:25",
+    "seconds": 981.9,
     "info": {
-      "spot_rows": 12,
-      "sse_backfilled_days": 249,
-      "sse_remaining": 655,
-      "sse_errors": [
-        "2026-09-23: \"None of [Index(['序号', '基金代码', '基金简称', 'ETF类型', '统计日期', '基金份额'], dtype='str')] are in the [columns]\""
-      ],
-      "rows": 2004,
-      "last": "2026-09-23"
+      "spot_error": "502 Server Error: Bad Gateway for url: https://push2delay.eastmoney.com/api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&wbp2u=%7C0%7C0%7C0%7Cweb&fid=f12&fs=b%3",
+      "sse_backfilled_days": 250,
+      "sse_remaining": 404,
+      "sse_errors": [],
+      "rows": 3996,
+      "last": "2026-09-22"
     }
   },
   "breadth": {
     "ok": true,
-    "at": "2026-09-23T04:22:01",
-    "seconds": 3999.8,
+    "at": "2026-09-23T05:19:17",
+    "seconds": 1732.6,
     "info": {
       "source": "csindex",
       "constituents": 300,
       "fetched": 300,
       "failed": 0,
       "failed_sample": [],
-      "rows": 4063,
-      "last": "2026-09-23"
+      "rows": 4062,
+      "last": "2026-09-22"
     }
   }
 }

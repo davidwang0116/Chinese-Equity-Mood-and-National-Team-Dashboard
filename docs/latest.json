@@ -1,15 +1,15 @@
 {
   "date": "2026-09-22",
-  "composite": 69.12,
+  "composite": 68.85,
   "multiplier": 1.5,
-  "fear": 51.53,
+  "fear": 50.61,
   "value": 76.66,
   "nt_intensity": 0.2,
   "nt_active_5d": false,
   "raw": {
     "dd": -10.1799,
     "qvix": 15.94,
-    "breadth": 29.3103,
+    "breadth": 32.7586,
     "rsi": 47.9499,
     "boll_z": -0.0489,
     "turnover": 0.8197,
