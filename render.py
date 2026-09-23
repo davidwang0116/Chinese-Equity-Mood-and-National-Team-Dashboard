@@ -7,7 +7,8 @@ import pandas as pd
 
 CARD_DEFS = [
     # key, 名称, 说明, 原始值格式, 子分列
-    ("dd", "沪深300 回撤", "距 252 日高点", "{:.2f}%", "s_dd"),
+    ("dd", "沪深300 回撤", "距 252 日高点（估值轴）", "{:.2f}%", "s_dd"),
+    ("erp", "股债利差", "沪深300 1/PE − 10年国债（估值轴）", "{:.2f}%", "s_erp"),
     ("qvix", "QVIX 恐慌指数", "300ETF 期权隐含波动率", "{:.2f}", "s_qvix"),
     ("breadth", "市场参与度", "沪深300成分股站上200日线占比", "{:.1f}%", "s_breadth"),
     ("rsi", "RSI(14)", "沪深300 超买超卖", "{:.1f}", "s_rsi"),
@@ -17,7 +18,6 @@ CARD_DEFS = [
 ]
 
 REF_DEFS = [
-    ("erp", "股债利差", "沪深300 1/PE − 10年国债", "{:.2f}%"),
     ("pe_ttm", "沪深300 PE(TTM)", "乐咕乐股", "{:.2f}"),
     ("congestion", "大盘拥挤度", "乐咕乐股", "{:.3f}"),
     ("net_new_high_120", "120日新高−新低", "沪深300成分股家数", "{:+.0f}"),
@@ -200,6 +200,9 @@ def render_dashboard(frame, config, fetch_report=None, backtest=None):
         ok = v.get("ok")
         info = v.get("info", {})
         last = info.get("last", "") if isinstance(info, dict) else ""
+        if not last and isinstance(info, dict):
+            lasts = [v2.get("last") for v2 in info.values() if isinstance(v2, dict) and v2.get("last")]
+            last = max(lasts) if lasts else ""
         fr_rows += (f'<tr><td>{k}</td><td class="{"ok" if ok else "bad"}">{"✓" if ok else "✗"}</td>'
                     f'<td>{html.escape(str(last))}</td><td>{html.escape(str(v.get("at", "")))}</td>'
                     f'<td class="err">{html.escape(str(v.get("error", ""))[:120])}</td></tr>')
@@ -216,6 +219,7 @@ def render_dashboard(frame, config, fetch_report=None, backtest=None):
     fw = config["fear_weights"]
     aw = config["axis_weights"]
     weights_txt = " + ".join(f"{k} {v:.0%}" for k, v in fw.items())
+    value_txt = " + ".join(f"{k} {v:.0%}" for k, v in config["value_axis"].items() if v)
 
     return f"""<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
@@ -271,7 +275,7 @@ td.ok {{ color:var(--neg) }} td.bad {{ color:var(--pos) }} td.err {{ color:var(-
 
 <h2>情绪与技术指标</h2>
 <div class="grid4">{''.join(cards)}</div>
-<div class="note">恐慌轴 = {weights_txt}（缺失分项自动剔除并重新归一化）；估值轴 = 沪深300 回撤。</div>
+<div class="note">恐慌轴 = {weights_txt}；估值轴 = {value_txt}（缺失分项自动剔除并重新归一化）。</div>
 
 <h2>救市资金 / 超大资金</h2>
 <div class="refs">{''.join(nt_items)}</div>

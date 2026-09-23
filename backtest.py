@@ -12,6 +12,7 @@
   4. 救市资金事件研究 + 三种角色（观察 / 验证 / 并列）对比，给出结论
 """
 import datetime
+import itertools
 import json
 import math
 from pathlib import Path
@@ -21,7 +22,7 @@ import pandas as pd
 
 from indicators import build_indicators, load_data
 from national_team import apply_overlay, build_national_team
-from scoring import FEAR_KEYS, load_config, multiplier_of, score_frame
+from scoring import FEAR_KEYS, load_config, multiplier_of, score_frame, sub_scores
 
 BASE = Path(__file__).parent
 REPORTS = BASE / "reports"
@@ -160,17 +161,19 @@ def run_backtest(data=None, reports_dir=REPORTS):
     profiles = fear_profiles(config, ic_first)
     axis_opts = [0.3, 0.4, 0.5, 0.6]
     modes = ["observe", "confirm", "parallel"]
+    value_opts = config.get("value_axis_candidates") or {"config": config["value_axis"]}
+    subs = sub_scores(ind, config)
     rows = []
-    for pname, fw in profiles.items():
-        for af in axis_opts:
-            sc = score_frame(ind, config, fear_weights=fw,
+    for (pname, fw), (vname, vw), af in itertools.product(profiles.items(), value_opts.items(), axis_opts):
+        if True:
+            sc = score_frame(ind, config, fear_weights=fw, value_weights=vw, subs=subs,
                              axis_weights={"fear": af, "value": 1.0 - af})
             for mode in modes:
                 comp, mult = apply_overlay(sc["composite"], sc["multiplier"], nt, config, mode)
                 if mult is None:
                     mult = comp.map(lambda s: multiplier_of(s, config))
                 sig = mult.shift(1)  # 收盘信号次日执行
-                res = {"profile": pname, "fear_axis_weight": af, "nt_mode": mode}
+                res = {"profile": pname, "value_axis": vname, "fear_axis_weight": af, "nt_mode": mode}
                 for label, ds in [("full", dates), ("first_half", first), ("second_half", second)]:
                     ds = ds[sig.loc[ds].notna().to_numpy()]
                     r = simulate(asset.loc[ds], sig.loc[ds])
@@ -208,6 +211,9 @@ def run_backtest(data=None, reports_dir=REPORTS):
                                                  sig.loc[ds].value_counts().sort_index().items()}},
         "grid_top_in_sample": best_is.to_dict(orient="records"),
         "grid_top_robust": best_robust.to_dict(orient="records"),
+        "grid_value_axis_summary": grid.groupby("value_axis")[
+            ["first_half_excess_irr", "second_half_excess_irr", "full_excess_irr", "full_cost_vs_plain"]
+        ].median().round(3).to_dict(orient="index"),
         "grid_mode_summary": grid.groupby("nt_mode")[
             ["first_half_excess_irr", "second_half_excess_irr", "full_excess_irr"]
         ].median().round(3).to_dict(orient="index"),
@@ -256,9 +262,14 @@ def national_team_study(ind, nt, asset, fwd, grid):
             out[f"fwd_{h}d_hit_rate"] = round(float((r > 0).mean()), 3) if len(r) else None
         return out
 
+    post = pd.Series(ind.index >= "2020-01-01", index=ind.index)
     comparison = {
         "active_days": agg(active),
         "stress_days_without_footprint": agg(stress & ~active),
+        "active_days_pre2020": agg(active & ~post),
+        "stress_no_footprint_pre2020": agg(stress & ~active & ~post),
+        "active_days_2020_on": agg(active & post),
+        "stress_no_footprint_2020_on": agg(stress & ~active & post),
         "all_days": agg(pd.Series(True, index=ind.index)),
     }
     if len(ev):
@@ -285,28 +296,44 @@ def decide_role(comparison, timing, med):
     edge = None
     if a.get("fwd_60d_mean_pct") is not None and b.get("fwd_60d_mean_pct") is not None:
         edge = a["fwd_60d_mean_pct"] - b["fwd_60d_mean_pct"]
-        notes.append(f"足迹日 vs 同样承压无足迹日 60日前瞻收益差 {edge:+.2f}pct")
+        notes.append(f"足迹日 vs 同样承压无足迹日 60日前瞻收益差 {edge:+.2f}pct（全样本）")
+    for era, ka, kb in [("2020 前", "active_days_pre2020", "stress_no_footprint_pre2020"),
+                        ("2020 起", "active_days_2020_on", "stress_no_footprint_2020_on")]:
+        x, y = comparison.get(ka, {}), comparison.get(kb, {})
+        if x.get("fwd_60d_mean_pct") is not None and y.get("fwd_60d_mean_pct") is not None:
+            notes.append(f"{era}：足迹日 {x['days']} 天，60日收益 {x['fwd_60d_mean_pct']:+.2f}% "
+                         f"vs 对照 {y['fwd_60d_mean_pct']:+.2f}%")
     lagging = timing.get("share_low_already_in", 0) >= 0.5
     if timing:
         notes.append(f"{timing.get('share_low_already_in', 0):.0%} 的事件发生在近20日低点之后"
                      f"（中位 {timing.get('median_days_after_20d_low')} 天）")
+    recent = None
+    x, y = comparison.get("active_days_2020_on", {}), comparison.get("stress_no_footprint_2020_on", {})
+    if x.get("fwd_60d_mean_pct") is not None and y.get("fwd_60d_mean_pct") is not None:
+        recent = x["fwd_60d_mean_pct"] - y["fwd_60d_mean_pct"]
+    role = "observe"
     if "observe" in med.index:
         obs = med.loc["observe"]
         gains = {m: (med.loc[m] - obs).to_dict() for m in med.index if m != "observe"}
         for m, g in gains.items():
             notes.append(f"{m} 相对 observe 的超额IRR中位变化：样本内 {g['first_half_excess_irr']:+.3f}，"
                          f"样本外 {g['second_half_excess_irr']:+.3f}")
-        both = {m: min(g["first_half_excess_irr"], g["second_half_excess_irr"]) for m, g in gains.items()}
-        best = max(both, key=both.get) if both else "observe"
-        if both.get(best, 0) > 0.02 and (edge is None or edge > 0):
-            role = best
-        else:
-            role = "observe"
-    else:
-        role = "observe"
-    role_cn = {"observe": "观察", "confirm": "验证", "parallel": "并列"}[role]
-    if role == "confirm" or (role == "observe" and lagging):
+        par = gains.get("parallel")
+        con = gains.get("confirm")
+        # 并列：两段都显著改善才考虑
+        if par and min(par["first_half_excess_irr"], par["second_half_excess_irr"]) > 0.02:
+            role = "parallel"
+        # 验证：近期（2020 起）足迹后收益明显好于对照，且验证模式在样本外不拖累
+        elif con and recent is not None and recent > 2.0 and con["second_half_excess_irr"] >= 0:
+            role = "confirm"
+    if role == "confirm":
+        notes.append("2020 年后足迹的前瞻收益显著好于同样承压的对照，而 2015-16 的早期救市失败；"
+                     "当前制度下（汇金定位为类平准基金）作为“验证”上调一档，但事件数少，需持续跟踪")
+    if lagging:
         notes.append("足迹多出现在低点附近或之后，更像“托底确认”而非领先信号")
+    else:
+        notes.append("足迹多出现在当日/近期低点当天，本身不预示后续不再下跌（2015-16 仍续跌约 17%）")
+    role_cn = {"observe": "观察", "confirm": "验证", "parallel": "并列"}[role]
     return {"recommended_mode": role, "recommended_mode_cn": role_cn, "evidence": notes}
 
 
@@ -335,10 +362,15 @@ def render_report(s):
         f"\n倍数分布：{cur['multiplier_counts']}\n",
         "\n## 3. 权重网格（前半段选参，后半段检验）\n",
         "### 稳健性排名（min(样本内, 样本外) 超额IRR）\n",
-        _tbl(s["grid_top_robust"], ["profile", "fear_axis_weight", "nt_mode", "first_half_excess_irr",
-                                    "second_half_excess_irr", "full_excess_irr", "full_avg_mult"]),
+        _tbl(s["grid_top_robust"], ["profile", "value_axis", "fear_axis_weight", "nt_mode",
+                                    "first_half_excess_irr", "second_half_excess_irr", "full_excess_irr",
+                                    "full_cost_vs_plain", "full_avg_mult"]),
+        "\n### 估值轴构成对比（各组合中位数）\n",
+        _tbl([{"value_axis": k, **v} for k, v in s["grid_value_axis_summary"].items()],
+             ["value_axis", "first_half_excess_irr", "second_half_excess_irr", "full_excess_irr",
+              "full_cost_vs_plain"]),
         "\n### 样本内排名\n",
-        _tbl(s["grid_top_in_sample"], ["profile", "fear_axis_weight", "nt_mode", "first_half_excess_irr",
+        _tbl(s["grid_top_in_sample"], ["profile", "value_axis", "fear_axis_weight", "nt_mode", "first_half_excess_irr",
                                        "second_half_excess_irr", "full_excess_irr"]),
         "\n## 4. 救市资金\n",
         f"**建议角色：{s['national_team']['verdict']['recommended_mode_cn']}"

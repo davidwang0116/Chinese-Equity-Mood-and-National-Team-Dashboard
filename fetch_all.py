@@ -81,6 +81,21 @@ def today_str():
     return datetime.date.today().strftime("%Y%m%d")
 
 
+_BJ = datetime.timezone(datetime.timedelta(hours=8))
+
+
+def bj_now():
+    return datetime.datetime.now(_BJ)
+
+
+def drop_incomplete(df, col="date"):
+    """北京时间 15:30 前运行时，当日行情是盘中未完成的 bar，丢弃。"""
+    now = bj_now()
+    if now.time() < datetime.time(15, 30):
+        return df[df[col].astype(str) < now.strftime("%Y-%m-%d")]
+    return df
+
+
 def _prefixed(code):
     return ("sh" if code.startswith(("5", "6", "9")) else "sz") + code
 
@@ -103,7 +118,7 @@ def _index_daily(symbol):
 
     label, df = first_ok(("eastmoney", em), ("tencent", tx))
     df["date"] = _norm_date(df["date"])
-    return label, df.dropna(subset=["date", "close"])
+    return label, drop_incomplete(df.dropna(subset=["date", "close"]))
 
 
 def fetch_indexes():
@@ -139,6 +154,7 @@ def fetch_asset():
     )
     df = df.rename(columns={"日期": "date", "收盘": "close"})[["date", "close"]]
     df["date"] = _norm_date(df["date"])
+    df = drop_incomplete(df)
     df.to_csv(DATA / "asset_510300_hfq.csv", index=False)
     return {"source": label, "rows": len(df), "last": df["date"].iloc[-1]}
 
@@ -158,7 +174,7 @@ def _stock_hist(code, start):
 
     _, df = first_ok(("eastmoney", lambda: retry(em, tries=2)), ("tencent", lambda: retry(tx, tries=2)))
     df["date"] = _norm_date(df["date"])
-    return df.dropna()
+    return drop_incomplete(df.dropna())
 
 
 def fetch_breadth():
@@ -308,6 +324,7 @@ def fetch_etf_daily():
         try:
             label, df = first_ok(("eastmoney", em), ("sina", sina))
             df["date"] = _norm_date(df["date"])
+            df = drop_incomplete(df)
             df["code"] = code
             rows.append(df[["date", "code", "open", "high", "low", "close", "volume", "amount"]])
             status[code] = label
@@ -330,25 +347,33 @@ def fetch_etf_shares():
         columns=["date", "code", "shares", "source"])
     out = {}
 
-    # 1) 当日快照（沪深均有），数据日期以接口返回为准
+    # 1) 东方财富快照：仅用于深市 ETF（沪市用交易所口径）。
+    #    实测“最新份额”是上一交易日的值（与上交所 T-1 口径完全一致），因此标记为
+    #    今天(北京时间)之前的最近一个交易日；同一标签已有值时不覆盖。
+    idx_path = DATA / "index_csi300.csv"
     try:
+        today = bj_now().strftime("%Y-%m-%d")
+        days = pd.read_csv(idx_path)["date"] if idx_path.exists() else pd.Series(dtype=str)
+        prev_days = sorted(d for d in days if d < today)
+        label = prev_days[-1] if prev_days else None
         spot = retry(ak.fund_etf_spot_em)
-        spot = spot[spot["代码"].astype(str).isin(codes)]
-        date_col = spot["数据日期"] if "数据日期" in spot.columns else pd.Series(
-            [datetime.date.today()] * len(spot), index=spot.index)
-        snap = pd.DataFrame({
-            "date": _norm_date(date_col.astype(str)),
-            "code": spot["代码"].astype(str),
-            "shares": pd.to_numeric(spot["最新份额"], errors="coerce"),
-            "source": "eastmoney-spot",
-        }).dropna()
-        have = pd.concat([have, snap], ignore_index=True)
-        out["spot_rows"] = len(snap)
+        spot = spot[spot["代码"].astype(str).isin({c for c in codes if c.startswith("1")})]
+        if label and len(spot):
+            snap = pd.DataFrame({
+                "date": label,
+                "code": spot["代码"].astype(str),
+                "shares": pd.to_numeric(spot["最新份额"], errors="coerce"),
+                "source": "eastmoney-spot",
+            }).dropna()
+            existing = set(zip(have["date"], have["code"])) if len(have) else set()
+            snap = snap[[(d, c) not in existing for d, c in zip(snap["date"], snap["code"])]]
+            have = pd.concat([have, snap], ignore_index=True)
+            out["spot_rows"] = len(snap)
+            out["spot_label"] = label
     except Exception as e:  # noqa: BLE001
         out["spot_error"] = str(e)[:200]
 
     # 2) 上交所历史回填（每次运行最多 N 个交易日，从新到旧）
-    idx_path = DATA / "index_csi300.csv"
     if idx_path.exists():
         start = pd.Timestamp(CONFIG["fetch"]["etf_share_backfill_start"]).strftime("%Y-%m-%d")
         trade_days = pd.read_csv(idx_path)["date"]

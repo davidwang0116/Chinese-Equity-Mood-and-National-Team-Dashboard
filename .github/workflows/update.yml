@@ -9,8 +9,9 @@ on:
       - "requirements.txt"
       - ".github/workflows/**"
   schedule:
-    # 北京时间工作日 18:10（收盘后；两融数据次日早晨补齐，下一次运行会覆盖）
-    - cron: "10 10 * * 1-5"
+    # 北京时间周二至周六 08:30：上一交易日行情、两融、ETF 份额均已发布；
+    # 东方财富“最新份额”在此时恰为上一交易日口径。
+    - cron: "30 0 * * 2-6"
   workflow_dispatch:
     inputs:
       sources:

@@ -61,14 +61,15 @@ def sub_scores(ind, config):
     return out
 
 
-def score_frame(ind, config, fear_weights=None, axis_weights=None):
+def score_frame(ind, config, fear_weights=None, axis_weights=None, value_weights=None, subs=None):
     """Return DataFrame with sub-scores, axes, composite and base multiplier."""
-    subs = sub_scores(ind, config)
+    subs = sub_scores(ind, config) if subs is None else subs
     fw = fear_weights or config["fear_weights"]
     aw = axis_weights or config["axis_weights"]
+    vw = value_weights or config["value_axis"]
     out = subs.add_prefix("s_")
     out["fear"] = weighted_mean(subs, fw)
-    out["value"] = weighted_mean(subs, config["value_axis"])
+    out["value"] = weighted_mean(subs, vw)
     out["composite"] = weighted_mean(out[["fear", "value"]],
                                      {"fear": aw["fear"], "value": aw["value"]})
     out["multiplier"] = out["composite"].map(lambda s: multiplier_of(s, config))

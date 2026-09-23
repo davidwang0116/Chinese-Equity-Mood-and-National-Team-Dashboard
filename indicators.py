@@ -130,6 +130,9 @@ def build_indicators(data, config):
         df["market_amount"] = np.nan
         df["turnover"] = np.nan
 
+    # QVIX 免费源只有 2019-12 以后。曾尝试用已实现波动率回填更早年份，但 A 股牛市
+    # （如 2015 上半年）同样高波动，回填段 IC 为负，故不回填：之前的日期该分项缺失并自动重新归一化。
+    df["rv20"] = np.log(close).diff().rolling(20, min_periods=20).std() * math.sqrt(252) * 100.0
     if data.get("qvix") is not None:
         df["qvix"] = align(data["qvix"]["qvix"].astype(float))
     else:
