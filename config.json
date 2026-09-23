@@ -1,0 +1,89 @@
+{
+  "score_version": 1,
+
+  "fetch": {
+    "history_start": "20100101",
+    "breadth_index": "000300",
+    "stock_request_sleep": 0.25,
+    "etf_share_backfill_start": "20230101",
+    "etf_share_backfill_max_per_run": 250
+  },
+
+  "national_team_etfs": {
+    "510300": "华泰柏瑞沪深300ETF",
+    "510310": "易方达沪深300ETF",
+    "510330": "华夏沪深300ETF",
+    "159919": "嘉实沪深300ETF",
+    "510050": "华夏上证50ETF",
+    "510500": "南方中证500ETF",
+    "159922": "嘉实中证500ETF",
+    "512100": "南方中证1000ETF",
+    "159845": "华夏中证1000ETF",
+    "588000": "华夏科创50ETF",
+    "588080": "易方达科创50ETF",
+    "159915": "易方达创业板ETF"
+  },
+
+  "indicators": {
+    "dd_lookback_days": 252,
+    "rsi_days": 14,
+    "boll_days": 20,
+    "breadth_ma_days": 200,
+    "turnover_long_days": 250,
+    "turnover_short_days": 5,
+    "margin_change_days": 20
+  },
+
+  "anchors": {
+    "dd":       [[-40, 100], [-30, 95], [-20, 82], [-10, 62], [-5, 50], [0, 40]],
+    "qvix":     [[12, 0], [15, 20], [20, 45], [25, 65], [30, 80], [40, 100]],
+    "breadth":  [[10, 100], [20, 85], [35, 65], [50, 45], [65, 20], [80, 0]],
+    "rsi":      [[20, 100], [30, 85], [50, 50], [70, 15], [80, 0]],
+    "boll_z":   [[-2.5, 100], [-2.0, 85], [-1.0, 65], [0.0, 50], [1.0, 35], [2.0, 15], [2.5, 0]],
+    "turnover": [[0.55, 80], [0.7, 65], [1.0, 50], [1.5, 25], [2.0, 10], [2.5, 0]],
+    "margin":   [[-8, 100], [-4, 75], [0, 50], [4, 25], [8, 0]],
+    "erp":      [[1.0, 0], [2.0, 25], [3.0, 50], [4.0, 75], [5.0, 90], [6.0, 100]]
+  },
+
+  "fear_weights": {
+    "qvix": 0.20,
+    "breadth": 0.20,
+    "rsi": 0.15,
+    "boll_z": 0.15,
+    "turnover": 0.15,
+    "margin": 0.15
+  },
+
+  "axis_weights": { "fear": 0.40, "value": 0.60 },
+
+  "value_axis": { "dd": 1.00, "erp": 0.00 },
+
+  "multiplier_bands": [
+    [0,   60,  "正常定投",     1.0],
+    [60,  80,  "恐慌加仓",     1.5],
+    [80,  101, "极度恐慌加仓", 2.0]
+  ],
+
+  "national_team": {
+    "mode": "confirm",
+    "active_threshold": 60,
+    "confirm_min_composite": 55,
+    "confirm_step": 0.5,
+    "confirm_cap": 2.0,
+    "parallel_weight": 0.15,
+    "amount_baseline_days": 60,
+    "flow_baseline_days": 60,
+    "weights": {
+      "etf_flow": 0.40,
+      "etf_amount": 0.30,
+      "intraday_reversal": 0.15,
+      "large_small_divergence": 0.15
+    },
+    "anchors": {
+      "etf_flow_z":     [[0, 0], [1, 30], [2, 60], [3, 85], [4, 100]],
+      "etf_amount_x":   [[1.0, 0], [1.5, 30], [2.0, 55], [3.0, 85], [4.0, 100]],
+      "reversal":       [[0.0, 0], [0.5, 40], [1.0, 100]],
+      "divergence_pct": [[0.0, 0], [1.0, 40], [2.0, 75], [3.0, 100]]
+    }
+  }
+}
