@@ -1,0 +1,151 @@
+{
+  "indexes": {
+    "ok": true,
+    "at": "2026-09-23T02:54:06",
+    "seconds": 48.8,
+    "info": {
+      "csi300": {
+        "source": "eastmoney",
+        "rows": 4063,
+        "last": "2026-09-23"
+      },
+      "csi1000": {
+        "source": "eastmoney",
+        "rows": 4063,
+        "last": "2026-09-23"
+      },
+      "sse": {
+        "source": "eastmoney",
+        "rows": 4063,
+        "last": "2026-09-23"
+      },
+      "szse": {
+        "source": "tencent",
+        "rows": 4062,
+        "last": "2026-09-22"
+      }
+    }
+  },
+  "asset": {
+    "ok": true,
+    "at": "2026-09-23T02:54:08",
+    "seconds": 1.5,
+    "info": {
+      "source": "eastmoney-hfq",
+      "rows": 3484,
+      "last": "2026-09-23"
+    }
+  },
+  "qvix": {
+    "ok": true,
+    "at": "2026-09-23T02:54:21",
+    "seconds": 13.0,
+    "info": {
+      "source": "optbbs-300etf",
+      "rows": 1629,
+      "last": "2026-09-21"
+    }
+  },
+  "margin": {
+    "ok": true,
+    "at": "2026-09-23T02:54:33",
+    "seconds": 12.1,
+    "info": {
+      "source": "eastmoney-all",
+      "rows": 3396,
+      "last": "2026-09-22"
+    }
+  },
+  "valuation": {
+    "ok": true,
+    "at": "2026-09-23T02:54:42",
+    "seconds": 9.1,
+    "info": {
+      "erp": {
+        "source": "legulegu",
+        "rows": 5211,
+        "last": "2026-09-22"
+      },
+      "pe": {
+        "error": "'date'"
+      },
+      "congestion": {
+        "source": "legulegu",
+        "rows": 3650,
+        "last": "2026-09-22"
+      }
+    }
+  },
+  "high_low": {
+    "ok": true,
+    "at": "2026-09-23T02:54:43",
+    "seconds": 1.3,
+    "info": {
+      "source": "legulegu",
+      "rows": 500,
+      "last": "2026-09-22"
+    }
+  },
+  "market_flow": {
+    "ok": true,
+    "at": "2026-09-23T02:54:44",
+    "seconds": 1.3,
+    "info": {
+      "source": "eastmoney",
+      "rows": 120,
+      "last": "2026-09-22"
+    }
+  },
+  "etf_daily": {
+    "ok": true,
+    "at": "2026-09-23T02:56:11",
+    "seconds": 86.3,
+    "info": {
+      "per_code": {
+        "510300": "sina",
+        "510310": "eastmoney",
+        "510330": "eastmoney",
+        "159919": "eastmoney",
+        "510050": "eastmoney",
+        "510500": "sina",
+        "159922": "eastmoney",
+        "512100": "eastmoney",
+        "159845": "eastmoney",
+        "588000": "sina",
+        "588080": "eastmoney",
+        "159915": "eastmoney"
+      },
+      "rows": 34384,
+      "last": "2026-09-23"
+    }
+  },
+  "etf_shares": {
+    "ok": true,
+    "at": "2026-09-23T03:15:21",
+    "seconds": 1150.1,
+    "info": {
+      "spot_rows": 12,
+      "sse_backfilled_days": 249,
+      "sse_remaining": 655,
+      "sse_errors": [
+        "2026-09-23: \"None of [Index(['序号', '基金代码', '基金简称', 'ETF类型', '统计日期', '基金份额'], dtype='str')] are in the [columns]\""
+      ],
+      "rows": 2004,
+      "last": "2026-09-23"
+    }
+  },
+  "breadth": {
+    "ok": true,
+    "at": "2026-09-23T04:22:01",
+    "seconds": 3999.8,
+    "info": {
+      "source": "csindex",
+      "constituents": 300,
+      "fetched": 300,
+      "failed": 0,
+      "failed_sample": [],
+      "rows": 4063,
+      "last": "2026-09-23"
+    }
+  }
+}
