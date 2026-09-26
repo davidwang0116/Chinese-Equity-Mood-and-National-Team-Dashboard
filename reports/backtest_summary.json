@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T05:47:07",
+  "generated_at": "2026-09-26T06:06:50",
   "asset": "510300 后复权（含分红）",
   "sample": {
     "start": "2012-05-28",
@@ -140,15 +140,15 @@
     },
     "nt_intensity": {
       "coverage_start": "2010-01-04",
-      "ic_20d": -0.085,
-      "ic_60d": -0.058,
-      "ic_120d": -0.011,
+      "ic_20d": -0.095,
+      "ic_60d": -0.073,
+      "ic_120d": -0.039,
       "quintile_fwd60_pct": {
         "1": 5.32,
         "2": 2.86,
-        "3": 0.11,
-        "4": 0.44,
-        "5": 1.14
+        "3": 0.32,
+        "4": 0.23,
+        "5": 1.13
       }
     },
     "congestion_raw_inv": {
@@ -529,7 +529,7 @@
   "grid_value_axis_summary": {
     "dd30_erp70": {
       "first_half_excess_irr": 0.475,
-      "second_half_excess_irr": 0.47,
+      "second_half_excess_irr": 0.475,
       "full_excess_irr": 0.27,
       "full_cost_vs_plain": -2.455
     },
@@ -555,7 +555,7 @@
       "first_half_excess_irr": 0.57,
       "second_half_excess_irr": 0.57,
       "full_excess_irr": 0.33,
-      "full_cost_vs_plain": -2.775
+      "full_cost_vs_plain": -2.77
     }
   },
   "grid_mode_summary": {
@@ -645,7 +645,7 @@
     "events": [
       {
         "date": "2010-04-30",
-        "intensity": 60.4,
+        "intensity": 60.6,
         "dd": -13.94,
         "has_flow": false,
         "fwd_20d_pct": null,
