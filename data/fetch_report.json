@@ -1,51 +1,51 @@
 {
   "indexes": {
     "ok": true,
-    "at": "2026-09-30T05:46:57",
-    "seconds": 15.1,
+    "at": "2026-10-01T06:16:08",
+    "seconds": 125.9,
     "info": {
       "csi300": {
-        "source": "eastmoney",
-        "rows": 4066,
-        "last": "2026-09-29"
+        "source": "tencent",
+        "rows": 4067,
+        "last": "2026-09-30"
       },
       "csi1000": {
-        "source": "eastmoney",
-        "rows": 4066,
-        "last": "2026-09-29"
+        "source": "tencent",
+        "rows": 2909,
+        "last": "2026-09-30"
       },
       "sse": {
-        "source": "eastmoney",
-        "rows": 4066,
-        "last": "2026-09-29"
+        "source": "tencent",
+        "rows": 4067,
+        "last": "2026-09-30"
       },
       "szse": {
-        "source": "eastmoney",
-        "rows": 4066,
-        "last": "2026-09-29"
+        "source": "tencent",
+        "rows": 4067,
+        "last": "2026-09-30"
       }
     }
   },
   "asset": {
     "ok": false,
-    "at": "2026-09-30T05:47:11",
+    "at": "2026-10-01T06:16:20",
     "error": "RuntimeError: eastmoney-hfq: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
     "last_ok": "2026-09-23T04:30:48"
   },
   "qvix": {
     "ok": true,
-    "at": "2026-09-30T05:47:17",
-    "seconds": 6.1,
+    "at": "2026-10-01T06:16:35",
+    "seconds": 15.0,
     "info": {
       "source": "optbbs-300etf",
-      "rows": 1634,
-      "last": "2026-09-29"
+      "rows": 1635,
+      "last": "2026-09-30"
     }
   },
   "margin": {
     "ok": true,
-    "at": "2026-09-30T05:47:31",
-    "seconds": 13.3,
+    "at": "2026-10-01T06:17:12",
+    "seconds": 36.3,
     "info": {
       "source": "eastmoney-all",
       "rows": 3400,
@@ -54,88 +54,92 @@
   },
   "valuation": {
     "ok": true,
-    "at": "2026-09-30T05:47:39",
-    "seconds": 8.3,
+    "at": "2026-10-01T06:17:20",
+    "seconds": 8.4,
     "info": {
       "erp": {
         "source": "legulegu",
-        "rows": 5215,
-        "last": "2026-09-29"
+        "rows": 5216,
+        "last": "2026-09-30"
       },
       "pe": {
         "error": "'date'"
       },
       "congestion": {
         "source": "legulegu",
-        "rows": 3654,
-        "last": "2026-09-29"
+        "rows": 3655,
+        "last": "2026-09-30"
       }
     }
   },
   "high_low": {
     "ok": true,
-    "at": "2026-09-30T05:47:40",
-    "seconds": 0.9,
+    "at": "2026-10-01T06:17:21",
+    "seconds": 1.3,
     "info": {
       "source": "legulegu",
       "rows": 500,
-      "last": "2026-09-29"
+      "last": "2026-09-30"
     }
   },
   "market_flow": {
-    "ok": false,
-    "at": "2026-09-30T05:47:53",
-    "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-    "last_ok": "2026-09-26T05:14:55"
+    "ok": true,
+    "at": "2026-10-01T06:17:23",
+    "seconds": 1.3,
+    "info": {
+      "source": "eastmoney",
+      "rows": 120,
+      "last": "2026-09-30"
+    }
   },
   "etf_daily": {
     "ok": true,
-    "at": "2026-09-30T05:49:04",
-    "seconds": 70.8,
+    "at": "2026-10-01T06:20:16",
+    "seconds": 173.5,
     "info": {
       "per_code": {
         "510300": "sina",
         "510310": "sina",
-        "510330": "eastmoney",
-        "159919": "eastmoney",
-        "510050": "eastmoney",
-        "510500": "eastmoney",
-        "159922": "eastmoney",
-        "512100": "eastmoney",
-        "159845": "eastmoney",
-        "588000": "eastmoney",
+        "510330": "sina",
+        "159919": "sina",
+        "510050": "sina",
+        "510500": "sina",
+        "159922": "sina",
+        "512100": "sina",
+        "159845": "sina",
+        "588000": "sina",
         "588080": "sina",
         "159915": "sina"
       },
-      "rows": 34423,
-      "last": "2026-09-29"
+      "rows": 35621,
+      "last": "2026-09-30"
     }
   },
   "etf_shares": {
     "ok": true,
-    "at": "2026-09-30T05:50:12",
-    "seconds": 67.8,
+    "at": "2026-10-01T06:20:54",
+    "seconds": 37.7,
     "info": {
       "spot_error": "502 Server Error: Bad Gateway for url: https://push2delay.eastmoney.com/api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&wbp2u=%7C0%7C0%7C0%7Cweb&fid=f12&fs=b%3",
       "sse_backfilled_days": 1,
       "sse_remaining": 0,
       "sse_errors": [],
-      "rows": 7260,
-      "last": "2026-09-29"
+      "rows": 7268,
+      "last": "2026-09-30"
     }
   },
   "breadth": {
     "ok": true,
-    "at": "2026-09-30T06:09:14",
-    "seconds": 1141.9,
+    "at": "2026-10-01T06:58:55",
+    "seconds": 2281.1,
     "info": {
       "source": "csindex",
       "constituents": 300,
       "fetched": 300,
       "failed": 0,
       "failed_sample": [],
-      "rows": 4066,
-      "last": "2026-09-29"
+      "rows": 4067,
+      "last": "2026-09-30"
     }
   }
 }
