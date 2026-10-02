@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T06:59:16",
+  "generated_at": "2026-10-02T06:38:36",
   "asset": "510300 后复权（含分红）",
   "sample": {
     "start": "2012-05-28",
@@ -542,7 +542,7 @@
     "dd70_erp30": {
       "first_half_excess_irr": 0.31,
       "second_half_excess_irr": 0.34,
-      "full_excess_irr": 0.17,
+      "full_excess_irr": 0.175,
       "full_cost_vs_plain": -2.02
     },
     "dd_only": {
@@ -645,7 +645,7 @@
     "events": [
       {
         "date": "2010-04-30",
-        "intensity": 60.6,
+        "intensity": 60.4,
         "dd": -13.94,
         "has_flow": false,
         "fwd_20d_pct": null,
