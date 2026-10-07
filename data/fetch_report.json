@@ -1,8 +1,8 @@
 {
   "indexes": {
     "ok": true,
-    "at": "2026-10-06T06:37:23",
-    "seconds": 10.4,
+    "at": "2026-10-07T06:15:24",
+    "seconds": 64.0,
     "info": {
       "csi300": {
         "source": "eastmoney",
@@ -15,12 +15,12 @@
         "last": "2026-09-30"
       },
       "sse": {
-        "source": "eastmoney",
+        "source": "tencent",
         "rows": 4067,
         "last": "2026-09-30"
       },
       "szse": {
-        "source": "eastmoney",
+        "source": "tencent",
         "rows": 4067,
         "last": "2026-09-30"
       }
@@ -28,14 +28,14 @@
   },
   "asset": {
     "ok": false,
-    "at": "2026-10-06T06:37:34",
+    "at": "2026-10-07T06:15:37",
     "error": "RuntimeError: eastmoney-hfq: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
     "last_ok": "2026-09-23T04:30:48"
   },
   "qvix": {
     "ok": true,
-    "at": "2026-10-06T06:37:38",
-    "seconds": 4.6,
+    "at": "2026-10-07T06:15:42",
+    "seconds": 5.6,
     "info": {
       "source": "optbbs-300etf",
       "rows": 1635,
@@ -44,8 +44,8 @@
   },
   "margin": {
     "ok": true,
-    "at": "2026-10-06T06:37:53",
-    "seconds": 14.7,
+    "at": "2026-10-07T06:15:56",
+    "seconds": 13.6,
     "info": {
       "source": "eastmoney-all",
       "rows": 3400,
@@ -54,8 +54,8 @@
   },
   "valuation": {
     "ok": true,
-    "at": "2026-10-06T06:38:02",
-    "seconds": 8.9,
+    "at": "2026-10-07T06:16:04",
+    "seconds": 7.9,
     "info": {
       "erp": {
         "source": "legulegu",
@@ -74,8 +74,8 @@
   },
   "high_low": {
     "ok": true,
-    "at": "2026-10-06T06:38:03",
-    "seconds": 1.3,
+    "at": "2026-10-07T06:16:05",
+    "seconds": 1.1,
     "info": {
       "source": "legulegu",
       "rows": 500,
@@ -84,8 +84,8 @@
   },
   "market_flow": {
     "ok": true,
-    "at": "2026-10-06T06:38:04",
-    "seconds": 0.6,
+    "at": "2026-10-07T06:16:07",
+    "seconds": 2.7,
     "info": {
       "source": "eastmoney",
       "rows": 120,
@@ -94,8 +94,8 @@
   },
   "etf_daily": {
     "ok": true,
-    "at": "2026-10-06T06:40:43",
-    "seconds": 159.5,
+    "at": "2026-10-07T06:18:40",
+    "seconds": 152.1,
     "info": {
       "per_code": {
         "510300": "sina",
@@ -117,8 +117,8 @@
   },
   "etf_shares": {
     "ok": true,
-    "at": "2026-10-06T06:41:19",
-    "seconds": 35.4,
+    "at": "2026-10-07T06:19:14",
+    "seconds": 34.9,
     "info": {
       "spot_error": "502 Server Error: Bad Gateway for url: https://push2delay.eastmoney.com/api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&wbp2u=%7C0%7C0%7C0%7Cweb&fid=f12&fs=b%3",
       "sse_backfilled_days": 0,
@@ -130,8 +130,8 @@
   },
   "breadth": {
     "ok": true,
-    "at": "2026-10-06T07:20:52",
-    "seconds": 2372.9,
+    "at": "2026-10-07T06:56:03",
+    "seconds": 2208.5,
     "info": {
       "source": "csindex",
       "constituents": 300,
