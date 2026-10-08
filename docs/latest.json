@@ -1,19 +1,19 @@
 {
   "date": "2026-09-30",
-  "composite": 76.02,
+  "composite": 76.64,
   "multiplier": 1.5,
-  "fear": 63.1,
+  "fear": 65.19,
   "value": 81.55,
   "nt_intensity": 6.1,
   "nt_active_5d": false,
   "raw": {
     "dd": -13.8752,
     "qvix": 15.96,
-    "breadth": 31.2715,
+    "breadth": 28.866,
     "rsi": 32.8874,
     "boll_z": -1.8751,
     "turnover": 0.6637,
-    "margin": -2.1171,
+    "margin": -3.6585,
     "erp": 6.3306
   }
 }
