@@ -1,45 +1,45 @@
 {
   "indexes": {
     "ok": true,
-    "at": "2026-10-20T05:04:45",
-    "seconds": 35.2,
+    "at": "2026-10-21T05:05:10",
+    "seconds": 7.3,
     "info": {
       "csi300": {
         "source": "eastmoney",
-        "rows": 4075,
-        "last": "2026-10-19"
+        "rows": 4076,
+        "last": "2026-10-20"
       },
       "csi1000": {
         "source": "eastmoney",
-        "rows": 4075,
-        "last": "2026-10-19"
+        "rows": 4076,
+        "last": "2026-10-20"
       },
       "sse": {
         "source": "eastmoney",
-        "rows": 4075,
-        "last": "2026-10-19"
+        "rows": 4076,
+        "last": "2026-10-20"
       },
       "szse": {
-        "source": "tencent",
-        "rows": 4075,
-        "last": "2026-10-19"
+        "source": "eastmoney",
+        "rows": 4076,
+        "last": "2026-10-20"
       }
     }
   },
   "asset": {
     "ok": true,
-    "at": "2026-10-20T05:04:51",
-    "seconds": 5.4,
+    "at": "2026-10-21T05:05:11",
+    "seconds": 1.5,
     "info": {
       "source": "eastmoney-hfq",
-      "rows": 3496,
-      "last": "2026-10-19"
+      "rows": 3497,
+      "last": "2026-10-20"
     }
   },
   "qvix": {
     "ok": true,
-    "at": "2026-10-20T05:04:55",
-    "seconds": 4.2,
+    "at": "2026-10-21T05:06:27",
+    "seconds": 76.3,
     "info": {
       "source": "optbbs-300etf",
       "rows": 1643,
@@ -48,58 +48,62 @@
   },
   "margin": {
     "ok": true,
-    "at": "2026-10-20T05:05:08",
-    "seconds": 13.1,
+    "at": "2026-10-21T05:06:40",
+    "seconds": 13.0,
     "info": {
       "source": "eastmoney-all",
-      "rows": 3409,
-      "last": "2026-10-19"
+      "rows": 3410,
+      "last": "2026-10-20"
     }
   },
   "valuation": {
     "ok": true,
-    "at": "2026-10-20T05:05:15",
-    "seconds": 6.8,
+    "at": "2026-10-21T05:06:49",
+    "seconds": 8.3,
     "info": {
       "erp": {
         "source": "legulegu",
-        "rows": 5224,
-        "last": "2026-10-19"
+        "rows": 5225,
+        "last": "2026-10-20"
       },
       "pe": {
         "error": "'date'"
       },
       "congestion": {
         "source": "legulegu",
-        "rows": 3663,
-        "last": "2026-10-19"
+        "rows": 3664,
+        "last": "2026-10-20"
       }
     }
   },
   "high_low": {
     "ok": true,
-    "at": "2026-10-20T05:05:15",
-    "seconds": 0.9,
+    "at": "2026-10-21T05:06:50",
+    "seconds": 1.2,
     "info": {
       "source": "legulegu",
       "rows": 500,
-      "last": "2026-10-19"
+      "last": "2026-10-20"
     }
   },
   "market_flow": {
-    "ok": false,
-    "at": "2026-10-20T05:05:27",
-    "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-    "last_ok": "2026-10-16T04:47:17"
+    "ok": true,
+    "at": "2026-10-21T05:06:52",
+    "seconds": 2.2,
+    "info": {
+      "source": "eastmoney",
+      "rows": 120,
+      "last": "2026-10-20"
+    }
   },
   "etf_daily": {
     "ok": true,
-    "at": "2026-10-20T05:06:31",
-    "seconds": 63.9,
+    "at": "2026-10-21T05:07:18",
+    "seconds": 25.6,
     "info": {
       "per_code": {
-        "510300": "sina",
-        "510310": "sina",
+        "510300": "eastmoney",
+        "510310": "eastmoney",
         "510330": "eastmoney",
         "159919": "eastmoney",
         "510050": "eastmoney",
@@ -108,38 +112,39 @@
         "512100": "eastmoney",
         "159845": "eastmoney",
         "588000": "eastmoney",
-        "588080": "sina",
-        "159915": "sina"
+        "588080": "eastmoney",
+        "159915": "eastmoney"
       },
-      "rows": 34531,
-      "last": "2026-10-19"
+      "rows": 34543,
+      "last": "2026-10-20"
     }
   },
   "etf_shares": {
     "ok": true,
-    "at": "2026-10-20T05:07:43",
-    "seconds": 72.5,
+    "at": "2026-10-21T05:08:00",
+    "seconds": 42.5,
     "info": {
-      "spot_error": "502 Server Error: Bad Gateway for url: https://push2delay.eastmoney.com/api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&wbp2u=%7C0%7C0%7C0%7Cweb&fid=f12&fs=b%3",
+      "spot_rows": 4,
+      "spot_label": "2026-10-20",
       "sse_backfilled_days": 1,
       "sse_remaining": 0,
       "sse_errors": [],
-      "rows": 7340,
-      "last": "2026-10-19"
+      "rows": 7352,
+      "last": "2026-10-20"
     }
   },
   "breadth": {
     "ok": true,
-    "at": "2026-10-20T05:24:30",
-    "seconds": 1006.8,
+    "at": "2026-10-21T05:13:55",
+    "seconds": 354.5,
     "info": {
       "source": "csindex",
       "constituents": 300,
       "fetched": 300,
       "failed": 0,
       "failed_sample": [],
-      "rows": 4075,
-      "last": "2026-10-19"
+      "rows": 4076,
+      "last": "2026-10-20"
     }
   }
 }
