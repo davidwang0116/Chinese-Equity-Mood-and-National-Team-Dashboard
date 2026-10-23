@@ -1,149 +1,149 @@
 {
   "indexes": {
     "ok": true,
-    "at": "2026-10-22T05:07:04",
-    "seconds": 8.7,
+    "at": "2026-10-23T05:07:45",
+    "seconds": 81.7,
     "info": {
       "csi300": {
-        "source": "eastmoney",
-        "rows": 4077,
-        "last": "2026-10-21"
+        "source": "tencent",
+        "rows": 4078,
+        "last": "2026-10-22"
       },
       "csi1000": {
-        "source": "eastmoney",
-        "rows": 4077,
-        "last": "2026-10-21"
+        "source": "tencent",
+        "rows": 2920,
+        "last": "2026-10-22"
       },
       "sse": {
-        "source": "eastmoney",
-        "rows": 4077,
-        "last": "2026-10-21"
+        "source": "tencent",
+        "rows": 4078,
+        "last": "2026-10-22"
       },
       "szse": {
         "source": "eastmoney",
-        "rows": 4077,
-        "last": "2026-10-21"
+        "rows": 4078,
+        "last": "2026-10-22"
       }
     }
   },
   "asset": {
     "ok": true,
-    "at": "2026-10-22T05:07:06",
-    "seconds": 1.9,
+    "at": "2026-10-23T05:07:46",
+    "seconds": 1.5,
     "info": {
       "source": "eastmoney-hfq",
-      "rows": 3498,
-      "last": "2026-10-21"
+      "rows": 3499,
+      "last": "2026-10-22"
     }
   },
   "qvix": {
     "ok": true,
-    "at": "2026-10-22T05:07:21",
-    "seconds": 14.2,
+    "at": "2026-10-23T05:07:56",
+    "seconds": 10.1,
     "info": {
       "source": "optbbs-300etf",
-      "rows": 1645,
-      "last": "2026-10-21"
+      "rows": 1646,
+      "last": "2026-10-22"
     }
   },
   "margin": {
     "ok": true,
-    "at": "2026-10-22T05:07:33",
-    "seconds": 12.8,
+    "at": "2026-10-23T05:08:12",
+    "seconds": 15.9,
     "info": {
       "source": "eastmoney-all",
-      "rows": 3411,
-      "last": "2026-10-21"
+      "rows": 3412,
+      "last": "2026-10-22"
     }
   },
   "valuation": {
     "ok": true,
-    "at": "2026-10-22T05:07:41",
-    "seconds": 7.4,
+    "at": "2026-10-23T05:08:19",
+    "seconds": 6.9,
     "info": {
       "erp": {
         "source": "legulegu",
-        "rows": 5226,
-        "last": "2026-10-21"
+        "rows": 5227,
+        "last": "2026-10-22"
       },
       "pe": {
         "error": "'date'"
       },
       "congestion": {
         "source": "legulegu",
-        "rows": 3665,
-        "last": "2026-10-21"
+        "rows": 3666,
+        "last": "2026-10-22"
       }
     }
   },
   "high_low": {
     "ok": true,
-    "at": "2026-10-22T05:07:42",
-    "seconds": 1.0,
+    "at": "2026-10-23T05:08:20",
+    "seconds": 1.2,
     "info": {
       "source": "legulegu",
       "rows": 500,
-      "last": "2026-10-21"
+      "last": "2026-10-22"
     }
   },
   "market_flow": {
     "ok": true,
-    "at": "2026-10-22T05:07:43",
-    "seconds": 1.1,
+    "at": "2026-10-23T05:08:33",
+    "seconds": 12.3,
     "info": {
       "source": "eastmoney",
       "rows": 120,
-      "last": "2026-10-21"
+      "last": "2026-10-22"
     }
   },
   "etf_daily": {
     "ok": true,
-    "at": "2026-10-22T05:10:16",
-    "seconds": 153.1,
+    "at": "2026-10-23T05:10:45",
+    "seconds": 132.8,
     "info": {
       "per_code": {
         "510300": "sina",
         "510310": "sina",
         "510330": "sina",
-        "159919": "eastmoney",
+        "159919": "sina",
         "510050": "sina",
         "510500": "sina",
         "159922": "sina",
         "512100": "sina",
         "159845": "sina",
-        "588000": "eastmoney",
-        "588080": "sina",
-        "159915": "sina"
+        "588000": "sina",
+        "588080": "eastmoney",
+        "159915": "eastmoney"
       },
-      "rows": 35741,
-      "last": "2026-10-21"
+      "rows": 35753,
+      "last": "2026-10-22"
     }
   },
   "etf_shares": {
     "ok": true,
-    "at": "2026-10-22T05:11:01",
-    "seconds": 44.7,
+    "at": "2026-10-23T05:11:30",
+    "seconds": 44.8,
     "info": {
       "spot_error": "502 Server Error: Bad Gateway for url: https://push2delay.eastmoney.com/api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&wbp2u=%7C0%7C0%7C0%7Cweb&fid=f12&fs=b%3",
       "sse_backfilled_days": 1,
       "sse_remaining": 0,
       "sse_errors": [],
-      "rows": 7360,
-      "last": "2026-10-21"
+      "rows": 7368,
+      "last": "2026-10-22"
     }
   },
   "breadth": {
     "ok": true,
-    "at": "2026-10-22T05:41:04",
-    "seconds": 1803.0,
+    "at": "2026-10-23T05:44:52",
+    "seconds": 2001.8,
     "info": {
       "source": "csindex",
       "constituents": 300,
       "fetched": 300,
       "failed": 0,
       "failed_sample": [],
-      "rows": 4077,
-      "last": "2026-10-21"
+      "rows": 4078,
+      "last": "2026-10-22"
     }
   }
 }
