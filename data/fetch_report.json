@@ -1,45 +1,41 @@
 {
   "indexes": {
     "ok": true,
-    "at": "2026-10-23T05:07:45",
-    "seconds": 81.7,
+    "at": "2026-10-24T04:52:09",
+    "seconds": 69.0,
     "info": {
       "csi300": {
-        "source": "tencent",
-        "rows": 4078,
-        "last": "2026-10-22"
+        "source": "eastmoney",
+        "rows": 4079,
+        "last": "2026-10-23"
       },
       "csi1000": {
-        "source": "tencent",
-        "rows": 2920,
-        "last": "2026-10-22"
+        "source": "eastmoney",
+        "rows": 4079,
+        "last": "2026-10-23"
       },
       "sse": {
         "source": "tencent",
-        "rows": 4078,
-        "last": "2026-10-22"
+        "rows": 4079,
+        "last": "2026-10-23"
       },
       "szse": {
-        "source": "eastmoney",
-        "rows": 4078,
-        "last": "2026-10-22"
+        "source": "tencent",
+        "rows": 4079,
+        "last": "2026-10-23"
       }
     }
   },
   "asset": {
-    "ok": true,
-    "at": "2026-10-23T05:07:46",
-    "seconds": 1.5,
-    "info": {
-      "source": "eastmoney-hfq",
-      "rows": 3499,
-      "last": "2026-10-22"
-    }
+    "ok": false,
+    "at": "2026-10-24T04:52:20",
+    "error": "RuntimeError: eastmoney-hfq: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+    "last_ok": "2026-10-23T05:07:46"
   },
   "qvix": {
     "ok": true,
-    "at": "2026-10-23T05:07:56",
-    "seconds": 10.1,
+    "at": "2026-10-24T04:52:31",
+    "seconds": 10.2,
     "info": {
       "source": "optbbs-300etf",
       "rows": 1646,
@@ -48,58 +44,54 @@
   },
   "margin": {
     "ok": true,
-    "at": "2026-10-23T05:08:12",
-    "seconds": 15.9,
+    "at": "2026-10-24T04:53:59",
+    "seconds": 88.7,
     "info": {
       "source": "eastmoney-all",
-      "rows": 3412,
-      "last": "2026-10-22"
+      "rows": 3413,
+      "last": "2026-10-23"
     }
   },
   "valuation": {
     "ok": true,
-    "at": "2026-10-23T05:08:19",
-    "seconds": 6.9,
+    "at": "2026-10-24T04:54:08",
+    "seconds": 8.9,
     "info": {
       "erp": {
         "source": "legulegu",
-        "rows": 5227,
-        "last": "2026-10-22"
+        "rows": 5228,
+        "last": "2026-10-23"
       },
       "pe": {
         "error": "'date'"
       },
       "congestion": {
         "source": "legulegu",
-        "rows": 3666,
-        "last": "2026-10-22"
+        "rows": 3667,
+        "last": "2026-10-23"
       }
     }
   },
   "high_low": {
     "ok": true,
-    "at": "2026-10-23T05:08:20",
+    "at": "2026-10-24T04:54:09",
     "seconds": 1.2,
     "info": {
       "source": "legulegu",
       "rows": 500,
-      "last": "2026-10-22"
+      "last": "2026-10-23"
     }
   },
   "market_flow": {
-    "ok": true,
-    "at": "2026-10-23T05:08:33",
-    "seconds": 12.3,
-    "info": {
-      "source": "eastmoney",
-      "rows": 120,
-      "last": "2026-10-22"
-    }
+    "ok": false,
+    "at": "2026-10-24T04:54:21",
+    "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+    "last_ok": "2026-10-23T05:08:33"
   },
   "etf_daily": {
     "ok": true,
-    "at": "2026-10-23T05:10:45",
-    "seconds": 132.8,
+    "at": "2026-10-24T04:56:58",
+    "seconds": 156.8,
     "info": {
       "per_code": {
         "510300": "sina",
@@ -112,38 +104,38 @@
         "512100": "sina",
         "159845": "sina",
         "588000": "sina",
-        "588080": "eastmoney",
-        "159915": "eastmoney"
+        "588080": "sina",
+        "159915": "sina"
       },
-      "rows": 35753,
-      "last": "2026-10-22"
+      "rows": 35765,
+      "last": "2026-10-23"
     }
   },
   "etf_shares": {
     "ok": true,
-    "at": "2026-10-23T05:11:30",
-    "seconds": 44.8,
+    "at": "2026-10-24T04:57:37",
+    "seconds": 39.0,
     "info": {
       "spot_error": "502 Server Error: Bad Gateway for url: https://push2delay.eastmoney.com/api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&wbp2u=%7C0%7C0%7C0%7Cweb&fid=f12&fs=b%3",
       "sse_backfilled_days": 1,
       "sse_remaining": 0,
       "sse_errors": [],
-      "rows": 7368,
-      "last": "2026-10-22"
+      "rows": 7376,
+      "last": "2026-10-23"
     }
   },
   "breadth": {
     "ok": true,
-    "at": "2026-10-23T05:44:52",
-    "seconds": 2001.8,
+    "at": "2026-10-24T05:34:59",
+    "seconds": 2241.9,
     "info": {
       "source": "csindex",
       "constituents": 300,
       "fetched": 300,
       "failed": 0,
       "failed_sample": [],
-      "rows": 4078,
-      "last": "2026-10-22"
+      "rows": 4079,
+      "last": "2026-10-23"
     }
   }
 }
