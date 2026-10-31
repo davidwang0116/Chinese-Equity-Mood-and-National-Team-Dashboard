@@ -1,147 +1,149 @@
 {
   "indexes": {
     "ok": true,
-    "at": "2026-10-30T06:07:07",
-    "seconds": 5.8,
+    "at": "2026-10-31T06:03:46",
+    "seconds": 107.3,
     "info": {
       "csi300": {
-        "source": "eastmoney",
-        "rows": 4083,
-        "last": "2026-10-29"
+        "source": "tencent",
+        "rows": 4084,
+        "last": "2026-10-30"
       },
       "csi1000": {
-        "source": "eastmoney",
-        "rows": 4083,
-        "last": "2026-10-29"
+        "source": "tencent",
+        "rows": 2926,
+        "last": "2026-10-30"
       },
       "sse": {
-        "source": "eastmoney",
-        "rows": 4083,
-        "last": "2026-10-29"
+        "source": "tencent",
+        "rows": 4084,
+        "last": "2026-10-30"
       },
       "szse": {
-        "source": "eastmoney",
-        "rows": 4083,
-        "last": "2026-10-29"
+        "source": "tencent",
+        "rows": 4084,
+        "last": "2026-10-30"
       }
     }
   },
   "asset": {
-    "ok": true,
-    "at": "2026-10-30T06:07:19",
-    "seconds": 11.5,
-    "info": {
-      "source": "eastmoney-hfq",
-      "rows": 3504,
-      "last": "2026-10-29"
-    }
+    "ok": false,
+    "at": "2026-10-31T06:03:58",
+    "error": "RuntimeError: eastmoney-hfq: Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，否则会延长限流。",
+    "last_ok": "2026-10-30T06:07:19"
   },
   "qvix": {
     "ok": true,
-    "at": "2026-10-30T06:07:25",
-    "seconds": 6.6,
+    "at": "2026-10-31T06:04:04",
+    "seconds": 5.1,
     "info": {
       "source": "optbbs-300etf",
-      "rows": 1651,
-      "last": "2026-10-29"
+      "rows": 1652,
+      "last": "2026-10-30"
     }
   },
   "margin": {
     "ok": true,
-    "at": "2026-10-30T06:07:41",
-    "seconds": 15.5,
+    "at": "2026-10-31T06:04:18",
+    "seconds": 14.9,
     "info": {
       "source": "eastmoney-all",
-      "rows": 3417,
-      "last": "2026-10-29"
+      "rows": 3418,
+      "last": "2026-10-30"
     }
   },
   "valuation": {
     "ok": true,
-    "at": "2026-10-30T06:07:49",
+    "at": "2026-10-31T06:04:27",
     "seconds": 8.6,
     "info": {
       "erp": {
         "source": "legulegu",
-        "rows": 5232,
-        "last": "2026-10-29"
+        "rows": 5233,
+        "last": "2026-10-30"
       },
       "pe": {
         "error": "'date'"
       },
       "congestion": {
         "source": "legulegu",
-        "rows": 3671,
-        "last": "2026-10-29"
+        "rows": 3672,
+        "last": "2026-10-30"
       }
     }
   },
   "high_low": {
     "ok": true,
-    "at": "2026-10-30T06:07:51",
-    "seconds": 1.3,
+    "at": "2026-10-31T06:04:28",
+    "seconds": 1.2,
     "info": {
       "source": "legulegu",
       "rows": 500,
-      "last": "2026-10-29"
+      "last": "2026-10-30"
     }
   },
   "market_flow": {
     "ok": true,
-    "at": "2026-10-30T06:07:55",
-    "seconds": 4.6,
+    "at": "2026-10-31T06:04:29",
+    "seconds": 0.9,
     "info": {
       "source": "eastmoney",
       "rows": 120,
-      "last": "2026-10-29"
+      "last": "2026-10-30"
     }
   },
   "etf_daily": {
     "ok": true,
-    "at": "2026-10-30T06:08:57",
-    "seconds": 61.4,
+    "at": "2026-10-31T06:07:26",
+    "seconds": 176.8,
     "info": {
       "per_code": {
-        "510300": "eastmoney",
-        "510310": "eastmoney",
-        "510330": "eastmoney",
+        "510300": "sina",
+        "510310": "sina",
+        "510330": "sina",
         "159919": "sina",
-        "510050": "eastmoney",
-        "510500": "eastmoney",
-        "159922": "eastmoney",
-        "512100": "eastmoney",
-        "159845": "eastmoney",
-        "588000": "eastmoney",
-        "588080": "eastmoney",
+        "510050": "sina",
+        "510500": "sina",
+        "159922": "sina",
+        "512100": "sina",
+        "159845": "sina",
+        "588000": "sina",
+        "588080": "sina",
         "159915": "sina"
       },
-      "rows": 34627,
-      "last": "2026-10-29"
+      "rows": 35825,
+      "last": "2026-10-30"
     }
   },
   "etf_shares": {
     "ok": true,
-    "at": "2026-10-30T06:09:43",
-    "seconds": 46.7,
+    "at": "2026-10-31T06:08:19",
+    "seconds": 53.0,
     "info": {
-      "spot_error": "502 Server Error: Bad Gateway for url: https://push2delay.eastmoney.com/api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&wbp2u=%7C0%7C0%7C0%7Cweb&fid=f12&fs=b%3",
+      "spot_error": "HTTPSConnectionPool(host='push2delay.eastmoney.com', port=443): Read timed out. (read timeout=10)",
       "sse_backfilled_days": 1,
       "sse_remaining": 0,
       "sse_errors": [],
-      "rows": 7412,
-      "last": "2026-10-29"
+      "rows": 7420,
+      "last": "2026-10-30"
     }
   },
   "breadth": {
     "ok": true,
-    "at": "2026-10-30T06:33:32",
-    "seconds": 1428.5,
+    "at": "2026-10-31T06:39:38",
+    "seconds": 1878.9,
     "info": {
       "source": "csindex",
       "constituents": 300,
-      "fetched": 300,
-      "failed": 0,
-      "failed_sample": [],
+      "fetched": 0,
+      "failed": 300,
+      "failed_sample": [
+        "000001: eastmoney: TypeError: stock_zh_a_hist() got an unexpected keyword argument 'timeout' | tencent: TypeError: stock_zh_a_hist_tx() got an unexpected keywor",
+        "000002: eastmoney: TypeError: stock_zh_a_hist() got an unexpected keyword argument 'timeout' | tencent: TypeError: stock_zh_a_hist_tx() got an unexpected keywor",
+        "000063: eastmoney: TypeError: stock_zh_a_hist() got an unexpected keyword argument 'timeout' | tencent: TypeError: stock_zh_a_hist_tx() got an unexpected keywor",
+        "000100: eastmoney: TypeError: stock_zh_a_hist() got an unexpected keyword argument 'timeout' | tencent: TypeError: stock_zh_a_hist_tx() got an unexpected keywor",
+        "000157: eastmoney: TypeError: stock_zh_a_hist() got an unexpected keyword argument 'timeout' | tencent: TypeError: stock_zh_a_hist_tx() got an unexpected keywor"
+      ],
       "rows": 4083,
       "last": "2026-10-29"
     }
