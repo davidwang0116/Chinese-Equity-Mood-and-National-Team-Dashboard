@@ -1,41 +1,41 @@
 {
   "indexes": {
     "ok": true,
-    "at": "2026-10-31T06:03:46",
-    "seconds": 107.3,
+    "at": "2026-11-03T07:03:29",
+    "seconds": 47.1,
     "info": {
       "csi300": {
-        "source": "tencent",
-        "rows": 4084,
-        "last": "2026-10-30"
+        "source": "eastmoney",
+        "rows": 4085,
+        "last": "2026-11-02"
       },
       "csi1000": {
-        "source": "tencent",
-        "rows": 2926,
-        "last": "2026-10-30"
+        "source": "eastmoney",
+        "rows": 4085,
+        "last": "2026-11-02"
       },
       "sse": {
         "source": "tencent",
-        "rows": 4084,
-        "last": "2026-10-30"
+        "rows": 4085,
+        "last": "2026-11-02"
       },
       "szse": {
         "source": "tencent",
-        "rows": 4084,
-        "last": "2026-10-30"
+        "rows": 4085,
+        "last": "2026-11-02"
       }
     }
   },
   "asset": {
     "ok": false,
-    "at": "2026-10-31T06:03:58",
+    "at": "2026-11-03T07:03:42",
     "error": "RuntimeError: eastmoney-hfq: Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，否则会延长限流。",
     "last_ok": "2026-10-30T06:07:19"
   },
   "qvix": {
     "ok": true,
-    "at": "2026-10-31T06:04:04",
-    "seconds": 5.1,
+    "at": "2026-11-03T07:06:22",
+    "seconds": 159.9,
     "info": {
       "source": "optbbs-300etf",
       "rows": 1652,
@@ -44,58 +44,54 @@
   },
   "margin": {
     "ok": true,
-    "at": "2026-10-31T06:04:18",
-    "seconds": 14.9,
+    "at": "2026-11-03T07:06:35",
+    "seconds": 13.5,
     "info": {
       "source": "eastmoney-all",
-      "rows": 3418,
-      "last": "2026-10-30"
+      "rows": 3419,
+      "last": "2026-11-02"
     }
   },
   "valuation": {
     "ok": true,
-    "at": "2026-10-31T06:04:27",
-    "seconds": 8.6,
+    "at": "2026-11-03T07:06:43",
+    "seconds": 7.8,
     "info": {
       "erp": {
         "source": "legulegu",
-        "rows": 5233,
-        "last": "2026-10-30"
+        "rows": 5234,
+        "last": "2026-11-02"
       },
       "pe": {
         "error": "'date'"
       },
       "congestion": {
         "source": "legulegu",
-        "rows": 3672,
-        "last": "2026-10-30"
+        "rows": 3673,
+        "last": "2026-11-02"
       }
     }
   },
   "high_low": {
     "ok": true,
-    "at": "2026-10-31T06:04:28",
-    "seconds": 1.2,
+    "at": "2026-11-03T07:06:44",
+    "seconds": 1.0,
     "info": {
       "source": "legulegu",
       "rows": 500,
-      "last": "2026-10-30"
+      "last": "2026-11-02"
     }
   },
   "market_flow": {
-    "ok": true,
-    "at": "2026-10-31T06:04:29",
-    "seconds": 0.9,
-    "info": {
-      "source": "eastmoney",
-      "rows": 120,
-      "last": "2026-10-30"
-    }
+    "ok": false,
+    "at": "2026-11-03T07:06:55",
+    "error": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，否则会延长限流。",
+    "last_ok": "2026-10-31T06:04:29"
   },
   "etf_daily": {
     "ok": true,
-    "at": "2026-10-31T06:07:26",
-    "seconds": 176.8,
+    "at": "2026-11-03T07:09:24",
+    "seconds": 148.8,
     "info": {
       "per_code": {
         "510300": "sina",
@@ -111,27 +107,27 @@
         "588080": "sina",
         "159915": "sina"
       },
-      "rows": 35825,
-      "last": "2026-10-30"
+      "rows": 35837,
+      "last": "2026-11-02"
     }
   },
   "etf_shares": {
     "ok": true,
-    "at": "2026-10-31T06:08:19",
-    "seconds": 53.0,
+    "at": "2026-11-03T07:09:56",
+    "seconds": 32.0,
     "info": {
-      "spot_error": "HTTPSConnectionPool(host='push2delay.eastmoney.com', port=443): Read timed out. (read timeout=10)",
+      "spot_error": "502 Server Error: Bad Gateway for url: https://push2delay.eastmoney.com/api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&wbp2u=%7C0%7C0%7C0%7Cweb&fid=f12&fs=b%3",
       "sse_backfilled_days": 1,
       "sse_remaining": 0,
       "sse_errors": [],
-      "rows": 7420,
-      "last": "2026-10-30"
+      "rows": 7428,
+      "last": "2026-11-02"
     }
   },
   "breadth": {
     "ok": true,
-    "at": "2026-10-31T06:39:38",
-    "seconds": 1878.9,
+    "at": "2026-11-03T07:41:15",
+    "seconds": 1878.6,
     "info": {
       "source": "csindex",
       "constituents": 300,
