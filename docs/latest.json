@@ -1,19 +1,19 @@
 {
-  "date": "2026-11-03",
-  "composite": 79.69,
+  "date": "2026-11-04",
+  "composite": 77.05,
   "multiplier": 2.0,
-  "fear": 68.81,
-  "value": 84.35,
-  "nt_intensity": 64.4,
+  "fear": 63.57,
+  "value": 82.83,
+  "nt_intensity": 51.5,
   "nt_active_5d": true,
   "raw": {
-    "dd": -20.768,
-    "qvix": 17.82,
+    "dd": -18.9404,
+    "qvix": 19.27,
     "breadth": null,
-    "rsi": 28.7794,
-    "boll_z": -1.2584,
-    "turnover": 0.7093,
-    "margin": -11.985,
-    "erp": 6.2468
+    "rsi": 40.9008,
+    "boll_z": -0.3434,
+    "turnover": 0.7436,
+    "margin": -10.5739,
+    "erp": 6.2048
   }
 }
