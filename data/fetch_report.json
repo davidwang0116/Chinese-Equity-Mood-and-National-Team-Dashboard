@@ -1,45 +1,45 @@
 {
   "indexes": {
     "ok": true,
-    "at": "2026-11-07T06:18:42",
-    "seconds": 5.5,
+    "at": "2026-11-10T07:34:10",
+    "seconds": 8.5,
     "info": {
       "csi300": {
         "source": "eastmoney",
-        "rows": 4089,
-        "last": "2026-11-06"
+        "rows": 4091,
+        "last": "2026-11-10"
       },
       "csi1000": {
         "source": "eastmoney",
-        "rows": 4089,
-        "last": "2026-11-06"
+        "rows": 4091,
+        "last": "2026-11-10"
       },
       "sse": {
         "source": "eastmoney",
-        "rows": 4089,
-        "last": "2026-11-06"
+        "rows": 4091,
+        "last": "2026-11-10"
       },
       "szse": {
         "source": "eastmoney",
-        "rows": 4089,
-        "last": "2026-11-06"
+        "rows": 4091,
+        "last": "2026-11-10"
       }
     }
   },
   "asset": {
     "ok": true,
-    "at": "2026-11-07T06:18:44",
-    "seconds": 1.2,
+    "at": "2026-11-10T07:34:11",
+    "seconds": 1.8,
     "info": {
       "source": "eastmoney-hfq",
-      "rows": 3510,
-      "last": "2026-11-06"
+      "rows": 3512,
+      "last": "2026-11-10"
     }
   },
   "qvix": {
     "ok": true,
-    "at": "2026-11-07T06:18:48",
-    "seconds": 4.4,
+    "at": "2026-11-10T07:34:15",
+    "seconds": 3.9,
     "info": {
       "source": "optbbs-300etf",
       "rows": 1656,
@@ -48,58 +48,58 @@
   },
   "margin": {
     "ok": true,
-    "at": "2026-11-07T06:19:05",
-    "seconds": 16.5,
+    "at": "2026-11-10T07:34:32",
+    "seconds": 16.7,
     "info": {
       "source": "eastmoney-all",
-      "rows": 3422,
-      "last": "2026-11-05"
+      "rows": 3424,
+      "last": "2026-11-09"
     }
   },
   "valuation": {
     "ok": true,
-    "at": "2026-11-07T06:19:12",
-    "seconds": 7.0,
+    "at": "2026-11-10T07:34:40",
+    "seconds": 8.4,
     "info": {
       "erp": {
         "source": "legulegu",
-        "rows": 5238,
-        "last": "2026-11-06"
+        "rows": 5239,
+        "last": "2026-11-09"
       },
       "pe": {
         "error": "'date'"
       },
       "congestion": {
         "source": "legulegu",
-        "rows": 3677,
-        "last": "2026-11-06"
+        "rows": 3678,
+        "last": "2026-11-09"
       }
     }
   },
   "high_low": {
     "ok": true,
-    "at": "2026-11-07T06:19:12",
-    "seconds": 0.9,
+    "at": "2026-11-10T07:34:42",
+    "seconds": 1.1,
     "info": {
       "source": "legulegu",
       "rows": 500,
-      "last": "2026-11-06"
+      "last": "2026-11-09"
     }
   },
   "market_flow": {
     "ok": true,
-    "at": "2026-11-07T06:19:13",
-    "seconds": 0.6,
+    "at": "2026-11-10T07:34:43",
+    "seconds": 1.0,
     "info": {
       "source": "eastmoney",
-      "rows": 120,
-      "last": "2026-11-06"
+      "rows": 121,
+      "last": "2026-11-10"
     }
   },
   "etf_daily": {
     "ok": true,
-    "at": "2026-11-07T06:19:30",
-    "seconds": 16.7,
+    "at": "2026-11-10T07:35:08",
+    "seconds": 25.7,
     "info": {
       "per_code": {
         "510300": "eastmoney",
@@ -115,28 +115,30 @@
         "588080": "eastmoney",
         "159915": "eastmoney"
       },
-      "rows": 34699,
-      "last": "2026-11-06"
+      "rows": 34723,
+      "last": "2026-11-10"
     }
   },
   "etf_shares": {
     "ok": true,
-    "at": "2026-11-07T06:20:07",
-    "seconds": 36.7,
+    "at": "2026-11-10T07:36:01",
+    "seconds": 52.3,
     "info": {
       "spot_rows": 4,
-      "spot_label": "2026-11-06",
+      "spot_label": "2026-11-09",
       "sse_backfilled_days": 1,
-      "sse_remaining": 0,
-      "sse_errors": [],
-      "rows": 7468,
-      "last": "2026-11-06"
+      "sse_remaining": 1,
+      "sse_errors": [
+        "2026-11-10: \"None of [Index(['序号', '基金代码', '基金简称', 'ETF类型', '统计日期', '基金份额'], dtype='str')] are in the [columns]\""
+      ],
+      "rows": 7480,
+      "last": "2026-11-09"
     }
   },
   "breadth": {
     "ok": true,
-    "at": "2026-11-07T06:51:25",
-    "seconds": 1878.2,
+    "at": "2026-11-10T08:07:19",
+    "seconds": 1878.8,
     "info": {
       "source": "csindex",
       "constituents": 300,
