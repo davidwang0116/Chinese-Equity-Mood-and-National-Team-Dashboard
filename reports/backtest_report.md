@@ -1,6 +1,6 @@
 # 回测报告 · A股情绪定投 + 救市资金
 
-生成时间 2026-11-10T08:07:39｜标的 510300 后复权（含分红）｜样本 2012-05-28 → 2026-11-10（3512 天，样本内/外分界 2019-08-12）
+生成时间 2026-11-11T07:27:34｜标的 510300 后复权（含分红）｜样本 2012-05-28 → 2026-11-10（3512 天，样本内/外分界 2019-08-12）
 
 ## 1. 子指标有效性（分越高=越恐慌；IC>0 表示恐慌时未来收益更高）
 
@@ -37,16 +37,16 @@
 
 | profile | value_axis | fear_axis_weight | nt_mode | first_half_excess_irr | second_half_excess_irr | full_excess_irr | full_cost_vs_plain | full_avg_mult |
 |---|---|---|---|---|---|---|---|---|
-| heavy_rsi | erp_only | 0.3 | observe | 0.86 | 0.57 | 0.45 | -3.44 | 1.413 |
-| heavy_rsi | erp_only | 0.3 | confirm | 0.86 | 0.57 | 0.45 | -3.4 | 1.416 |
-| heavy_margin | erp_only | 0.3 | confirm | 0.81 | 0.57 | 0.43 | -3.13 | 1.401 |
-| heavy_turnover | erp_only | 0.3 | confirm | 0.85 | 0.57 | 0.45 | -3.5 | 1.414 |
 | heavy_margin | erp_only | 0.3 | observe | 0.81 | 0.57 | 0.43 | -3.16 | 1.398 |
+| heavy_margin | erp_only | 0.3 | confirm | 0.81 | 0.57 | 0.43 | -3.13 | 1.401 |
+| heavy_rsi | erp_only | 0.3 | confirm | 0.86 | 0.57 | 0.45 | -3.4 | 1.416 |
+| heavy_rsi | erp_only | 0.3 | observe | 0.86 | 0.57 | 0.45 | -3.44 | 1.413 |
+| heavy_turnover | erp_only | 0.3 | confirm | 0.85 | 0.57 | 0.45 | -3.5 | 1.414 |
 | heavy_boll_z | erp_only | 0.3 | observe | 0.85 | 0.56 | 0.45 | -3.39 | 1.414 |
-| equal | erp_only | 0.3 | observe | 0.85 | 0.56 | 0.45 | -3.46 | 1.405 |
-| config | erp_only | 0.3 | confirm | 0.85 | 0.56 | 0.45 | -3.45 | 1.408 |
-| heavy_boll_z | erp_only | 0.3 | confirm | 0.84 | 0.56 | 0.45 | -3.34 | 1.418 |
+| equal | erp_only | 0.3 | confirm | 0.85 | 0.56 | 0.45 | -3.42 | 1.408 |
 | heavy_turnover | erp_only | 0.3 | observe | 0.85 | 0.56 | 0.45 | -3.54 | 1.411 |
+| heavy_boll_z | erp_only | 0.3 | confirm | 0.84 | 0.56 | 0.45 | -3.34 | 1.418 |
+| equal | erp_only | 0.3 | observe | 0.85 | 0.56 | 0.45 | -3.47 | 1.404 |
 
 
 ### 估值轴构成对比（各组合中位数）
@@ -64,16 +64,16 @@
 
 | profile | value_axis | fear_axis_weight | nt_mode | first_half_excess_irr | second_half_excess_irr | full_excess_irr |
 |---|---|---|---|---|---|---|
-| heavy_rsi | erp_only | 0.3 | observe | 0.86 | 0.57 | 0.45 |
 | heavy_rsi | erp_only | 0.3 | confirm | 0.86 | 0.57 | 0.45 |
+| heavy_rsi | erp_only | 0.3 | observe | 0.86 | 0.57 | 0.45 |
 | heavy_breadth | erp_only | 0.3 | observe | 0.86 | 0.56 | 0.46 |
-| heavy_boll_z | erp_only | 0.3 | observe | 0.85 | 0.56 | 0.45 |
-| heavy_turnover | erp_only | 0.3 | observe | 0.85 | 0.56 | 0.45 |
+| equal | erp_only | 0.3 | observe | 0.85 | 0.56 | 0.45 |
 | equal | erp_only | 0.3 | confirm | 0.85 | 0.56 | 0.45 |
-| heavy_qvix | erp_only | 0.3 | observe | 0.85 | 0.54 | 0.45 |
-| heavy_qvix | erp_only | 0.3 | confirm | 0.85 | 0.54 | 0.45 |
-| config | erp_only | 0.3 | observe | 0.85 | 0.55 | 0.45 |
+| heavy_turnover | erp_only | 0.3 | confirm | 0.85 | 0.57 | 0.45 |
+| heavy_boll_z | erp_only | 0.3 | observe | 0.85 | 0.56 | 0.45 |
 | config | erp_only | 0.3 | confirm | 0.85 | 0.56 | 0.45 |
+| config | erp_only | 0.3 | observe | 0.85 | 0.55 | 0.45 |
+| heavy_qvix | erp_only | 0.3 | observe | 0.85 | 0.54 | 0.45 |
 
 
 ## 4. 救市资金

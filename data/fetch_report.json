@@ -1,8 +1,8 @@
 {
   "indexes": {
     "ok": true,
-    "at": "2026-11-10T07:34:10",
-    "seconds": 8.5,
+    "at": "2026-11-11T06:51:59",
+    "seconds": 9.1,
     "info": {
       "csi300": {
         "source": "eastmoney",
@@ -28,8 +28,8 @@
   },
   "asset": {
     "ok": true,
-    "at": "2026-11-10T07:34:11",
-    "seconds": 1.8,
+    "at": "2026-11-11T06:52:00",
+    "seconds": 1.5,
     "info": {
       "source": "eastmoney-hfq",
       "rows": 3512,
@@ -38,68 +38,68 @@
   },
   "qvix": {
     "ok": true,
-    "at": "2026-11-10T07:34:15",
-    "seconds": 3.9,
+    "at": "2026-11-11T06:54:19",
+    "seconds": 138.7,
     "info": {
       "source": "optbbs-300etf",
-      "rows": 1656,
-      "last": "2026-11-06"
+      "rows": 1658,
+      "last": "2026-11-10"
     }
   },
   "margin": {
     "ok": true,
-    "at": "2026-11-10T07:34:32",
-    "seconds": 16.7,
+    "at": "2026-11-11T06:54:36",
+    "seconds": 17.3,
     "info": {
       "source": "eastmoney-all",
-      "rows": 3424,
-      "last": "2026-11-09"
+      "rows": 3425,
+      "last": "2026-11-10"
     }
   },
   "valuation": {
     "ok": true,
-    "at": "2026-11-10T07:34:40",
-    "seconds": 8.4,
+    "at": "2026-11-11T06:54:45",
+    "seconds": 8.8,
     "info": {
       "erp": {
         "source": "legulegu",
-        "rows": 5239,
-        "last": "2026-11-09"
+        "rows": 5240,
+        "last": "2026-11-10"
       },
       "pe": {
         "error": "'date'"
       },
       "congestion": {
         "source": "legulegu",
-        "rows": 3678,
-        "last": "2026-11-09"
+        "rows": 3679,
+        "last": "2026-11-10"
       }
     }
   },
   "high_low": {
     "ok": true,
-    "at": "2026-11-10T07:34:42",
-    "seconds": 1.1,
+    "at": "2026-11-11T06:54:46",
+    "seconds": 1.2,
     "info": {
       "source": "legulegu",
       "rows": 500,
-      "last": "2026-11-09"
+      "last": "2026-11-10"
     }
   },
   "market_flow": {
     "ok": true,
-    "at": "2026-11-10T07:34:43",
+    "at": "2026-11-11T06:54:47",
     "seconds": 1.0,
     "info": {
       "source": "eastmoney",
-      "rows": 121,
+      "rows": 120,
       "last": "2026-11-10"
     }
   },
   "etf_daily": {
     "ok": true,
-    "at": "2026-11-10T07:35:08",
-    "seconds": 25.7,
+    "at": "2026-11-11T06:55:09",
+    "seconds": 22.0,
     "info": {
       "per_code": {
         "510300": "eastmoney",
@@ -121,24 +121,22 @@
   },
   "etf_shares": {
     "ok": true,
-    "at": "2026-11-10T07:36:01",
-    "seconds": 52.3,
+    "at": "2026-11-11T06:56:04",
+    "seconds": 54.2,
     "info": {
       "spot_rows": 4,
-      "spot_label": "2026-11-09",
+      "spot_label": "2026-11-10",
       "sse_backfilled_days": 1,
-      "sse_remaining": 1,
-      "sse_errors": [
-        "2026-11-10: \"None of [Index(['序号', '基金代码', '基金简称', 'ETF类型', '统计日期', '基金份额'], dtype='str')] are in the [columns]\""
-      ],
-      "rows": 7480,
-      "last": "2026-11-09"
+      "sse_remaining": 0,
+      "sse_errors": [],
+      "rows": 7492,
+      "last": "2026-11-10"
     }
   },
   "breadth": {
     "ok": true,
-    "at": "2026-11-10T08:07:19",
-    "seconds": 1878.8,
+    "at": "2026-11-11T07:27:22",
+    "seconds": 1878.5,
     "info": {
       "source": "csindex",
       "constituents": 300,
