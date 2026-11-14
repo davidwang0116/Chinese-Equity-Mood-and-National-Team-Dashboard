@@ -1,55 +1,51 @@
 {
   "indexes": {
     "ok": true,
-    "at": "2026-11-13T07:00:45",
-    "seconds": 51.0,
+    "at": "2026-11-14T06:49:33",
+    "seconds": 24.0,
     "info": {
       "csi300": {
-        "source": "tencent",
-        "rows": 4093,
-        "last": "2026-11-12"
+        "source": "eastmoney",
+        "rows": 4094,
+        "last": "2026-11-13"
       },
       "csi1000": {
-        "source": "tencent",
-        "rows": 2935,
-        "last": "2026-11-12"
+        "source": "eastmoney",
+        "rows": 4094,
+        "last": "2026-11-13"
       },
       "sse": {
-        "source": "tencent",
-        "rows": 4093,
-        "last": "2026-11-12"
+        "source": "eastmoney",
+        "rows": 4094,
+        "last": "2026-11-13"
       },
       "szse": {
-        "source": "eastmoney",
-        "rows": 4093,
-        "last": "2026-11-12"
+        "source": "tencent",
+        "rows": 4094,
+        "last": "2026-11-13"
       }
     }
   },
   "asset": {
-    "ok": true,
-    "at": "2026-11-13T07:00:46",
-    "seconds": 1.2,
-    "info": {
-      "source": "eastmoney-hfq",
-      "rows": 3514,
-      "last": "2026-11-12"
-    }
+    "ok": false,
+    "at": "2026-11-14T06:49:44",
+    "error": "RuntimeError: eastmoney-hfq: Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，否则会延长限流。",
+    "last_ok": "2026-11-13T07:00:46"
   },
   "qvix": {
     "ok": true,
-    "at": "2026-11-13T07:01:55",
-    "seconds": 69.6,
+    "at": "2026-11-14T06:49:47",
+    "seconds": 3.6,
     "info": {
       "source": "optbbs-300etf",
-      "rows": 1660,
-      "last": "2026-11-12"
+      "rows": 1661,
+      "last": "2026-11-13"
     }
   },
   "margin": {
     "ok": true,
-    "at": "2026-11-13T07:02:12",
-    "seconds": 16.8,
+    "at": "2026-11-14T06:50:07",
+    "seconds": 19.4,
     "info": {
       "source": "eastmoney-all",
       "rows": 3427,
@@ -58,44 +54,48 @@
   },
   "valuation": {
     "ok": true,
-    "at": "2026-11-13T07:02:18",
-    "seconds": 5.5,
+    "at": "2026-11-14T06:50:14",
+    "seconds": 7.0,
     "info": {
       "erp": {
         "source": "legulegu",
-        "rows": 5242,
-        "last": "2026-11-12"
+        "rows": 5243,
+        "last": "2026-11-13"
       },
       "pe": {
         "error": "'date'"
       },
       "congestion": {
         "source": "legulegu",
-        "rows": 3681,
-        "last": "2026-11-12"
+        "rows": 3682,
+        "last": "2026-11-13"
       }
     }
   },
   "high_low": {
     "ok": true,
-    "at": "2026-11-13T07:02:19",
-    "seconds": 0.8,
+    "at": "2026-11-14T06:50:15",
+    "seconds": 1.0,
     "info": {
       "source": "legulegu",
       "rows": 500,
-      "last": "2026-11-12"
+      "last": "2026-11-13"
     }
   },
   "market_flow": {
-    "ok": false,
-    "at": "2026-11-13T07:02:29",
-    "error": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，否则会延长限流。",
-    "last_ok": "2026-11-11T06:54:47"
+    "ok": true,
+    "at": "2026-11-14T06:50:16",
+    "seconds": 1.9,
+    "info": {
+      "source": "eastmoney",
+      "rows": 120,
+      "last": "2026-11-13"
+    }
   },
   "etf_daily": {
     "ok": true,
-    "at": "2026-11-13T07:04:54",
-    "seconds": 144.2,
+    "at": "2026-11-14T06:52:35",
+    "seconds": 138.7,
     "info": {
       "per_code": {
         "510300": "sina",
@@ -104,34 +104,36 @@
         "159919": "sina",
         "510050": "sina",
         "510500": "sina",
-        "159922": "eastmoney",
+        "159922": "sina",
         "512100": "sina",
         "159845": "sina",
-        "588000": "eastmoney",
+        "588000": "sina",
         "588080": "sina",
         "159915": "sina"
       },
-      "rows": 35933,
-      "last": "2026-11-12"
+      "rows": 35945,
+      "last": "2026-11-13"
     }
   },
   "etf_shares": {
     "ok": true,
-    "at": "2026-11-13T07:05:26",
-    "seconds": 32.8,
+    "at": "2026-11-14T06:53:31",
+    "seconds": 55.9,
     "info": {
       "spot_error": "502 Server Error: Bad Gateway for url: https://push2delay.eastmoney.com/api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&wbp2u=%7C0%7C0%7C0%7Cweb&fid=f12&fs=b%3",
-      "sse_backfilled_days": 1,
-      "sse_remaining": 0,
-      "sse_errors": [],
+      "sse_backfilled_days": 0,
+      "sse_remaining": 1,
+      "sse_errors": [
+        "2026-11-13: HTTPSConnectionPool(host='query.sse.com.cn', port=443): Max retries exceeded with url: /commonQuery.do?isPag"
+      ],
       "rows": 7508,
       "last": "2026-11-12"
     }
   },
   "breadth": {
     "ok": true,
-    "at": "2026-11-13T07:36:44",
-    "seconds": 1877.7,
+    "at": "2026-11-14T07:24:49",
+    "seconds": 1878.2,
     "info": {
       "source": "csindex",
       "constituents": 300,
