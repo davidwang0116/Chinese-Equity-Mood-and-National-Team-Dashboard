@@ -1,150 +1,149 @@
 {
   "indexes": {
     "ok": true,
-    "at": "2026-11-14T06:49:33",
-    "seconds": 24.0,
+    "at": "2026-11-17T08:13:32",
+    "seconds": 34.7,
     "info": {
       "csi300": {
-        "source": "eastmoney",
-        "rows": 4094,
-        "last": "2026-11-13"
+        "source": "tencent",
+        "rows": 4095,
+        "last": "2026-11-16"
       },
       "csi1000": {
-        "source": "eastmoney",
-        "rows": 4094,
-        "last": "2026-11-13"
+        "source": "tencent",
+        "rows": 2937,
+        "last": "2026-11-16"
       },
       "sse": {
-        "source": "eastmoney",
-        "rows": 4094,
-        "last": "2026-11-13"
+        "source": "tencent",
+        "rows": 4095,
+        "last": "2026-11-16"
       },
       "szse": {
         "source": "tencent",
-        "rows": 4094,
-        "last": "2026-11-13"
+        "rows": 4095,
+        "last": "2026-11-16"
       }
     }
   },
   "asset": {
-    "ok": false,
-    "at": "2026-11-14T06:49:44",
-    "error": "RuntimeError: eastmoney-hfq: Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，否则会延长限流。",
-    "last_ok": "2026-11-13T07:00:46"
+    "ok": true,
+    "at": "2026-11-17T08:13:34",
+    "seconds": 2.0,
+    "info": {
+      "source": "eastmoney-hfq",
+      "rows": 3517,
+      "last": "2026-11-17"
+    }
   },
   "qvix": {
     "ok": true,
-    "at": "2026-11-14T06:49:47",
-    "seconds": 3.6,
+    "at": "2026-11-17T08:13:39",
+    "seconds": 5.0,
     "info": {
       "source": "optbbs-300etf",
-      "rows": 1661,
-      "last": "2026-11-13"
+      "rows": 1662,
+      "last": "2026-11-16"
     }
   },
   "margin": {
     "ok": true,
-    "at": "2026-11-14T06:50:07",
-    "seconds": 19.4,
+    "at": "2026-11-17T08:13:51",
+    "seconds": 12.0,
     "info": {
       "source": "eastmoney-all",
-      "rows": 3427,
-      "last": "2026-11-12"
+      "rows": 3429,
+      "last": "2026-11-16"
     }
   },
   "valuation": {
     "ok": true,
-    "at": "2026-11-14T06:50:14",
-    "seconds": 7.0,
+    "at": "2026-11-17T08:14:00",
+    "seconds": 8.5,
     "info": {
       "erp": {
         "source": "legulegu",
-        "rows": 5243,
-        "last": "2026-11-13"
+        "rows": 5244,
+        "last": "2026-11-16"
       },
       "pe": {
         "error": "'date'"
       },
       "congestion": {
         "source": "legulegu",
-        "rows": 3682,
-        "last": "2026-11-13"
+        "rows": 3684,
+        "last": "2026-11-17"
       }
     }
   },
   "high_low": {
     "ok": true,
-    "at": "2026-11-14T06:50:15",
-    "seconds": 1.0,
+    "at": "2026-11-17T08:14:01",
+    "seconds": 1.2,
     "info": {
       "source": "legulegu",
       "rows": 500,
-      "last": "2026-11-13"
+      "last": "2026-11-17"
     }
   },
   "market_flow": {
-    "ok": true,
-    "at": "2026-11-14T06:50:16",
-    "seconds": 1.9,
-    "info": {
-      "source": "eastmoney",
-      "rows": 120,
-      "last": "2026-11-13"
-    }
+    "ok": false,
+    "at": "2026-11-17T08:14:01",
+    "error": "AttributeError: stock_market_fund_flow 已在 1.20.45 更名为 stock_fund_flow_market_em，请改用 ak.stock_fund_flow_market_em；参数与返回的列也可能有调整，用 ak.interface_info(\"stock_fund_flow_market_em\") 查看。完整对照见 https://akshare.akfamily.xyz/changelog.html#changelog-rename",
+    "last_ok": "2026-11-14T06:50:16"
   },
   "etf_daily": {
     "ok": true,
-    "at": "2026-11-14T06:52:35",
-    "seconds": 138.7,
+    "at": "2026-11-17T08:14:18",
+    "seconds": 17.1,
     "info": {
       "per_code": {
-        "510300": "sina",
-        "510310": "sina",
-        "510330": "sina",
-        "159919": "sina",
-        "510050": "sina",
-        "510500": "sina",
-        "159922": "sina",
-        "512100": "sina",
-        "159845": "sina",
-        "588000": "sina",
-        "588080": "sina",
-        "159915": "sina"
+        "510300": "eastmoney",
+        "510310": "eastmoney",
+        "510330": "eastmoney",
+        "159919": "eastmoney",
+        "510050": "eastmoney",
+        "510500": "eastmoney",
+        "159922": "eastmoney",
+        "512100": "eastmoney",
+        "159845": "eastmoney",
+        "588000": "eastmoney",
+        "588080": "eastmoney",
+        "159915": "eastmoney"
       },
-      "rows": 35945,
-      "last": "2026-11-13"
+      "rows": 34783,
+      "last": "2026-11-17"
     }
   },
   "etf_shares": {
     "ok": true,
-    "at": "2026-11-14T06:53:31",
-    "seconds": 55.9,
+    "at": "2026-11-17T08:15:06",
+    "seconds": 47.9,
     "info": {
-      "spot_error": "502 Server Error: Bad Gateway for url: https://push2delay.eastmoney.com/api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&wbp2u=%7C0%7C0%7C0%7Cweb&fid=f12&fs=b%3",
-      "sse_backfilled_days": 0,
-      "sse_remaining": 1,
-      "sse_errors": [
-        "2026-11-13: HTTPSConnectionPool(host='query.sse.com.cn', port=443): Max retries exceeded with url: /commonQuery.do?isPag"
-      ],
-      "rows": 7508,
-      "last": "2026-11-12"
+      "spot_rows": 4,
+      "spot_label": "2026-11-16",
+      "sse_backfilled_days": 2,
+      "sse_remaining": 0,
+      "sse_errors": [],
+      "rows": 7528,
+      "last": "2026-11-16"
     }
   },
   "breadth": {
     "ok": true,
-    "at": "2026-11-14T07:24:49",
-    "seconds": 1878.2,
+    "at": "2026-11-17T08:46:26",
+    "seconds": 1880.6,
     "info": {
       "source": "csindex",
       "constituents": 300,
       "fetched": 0,
       "failed": 300,
       "failed_sample": [
-        "000001: eastmoney: TypeError: stock_zh_a_hist() got an unexpected keyword argument 'timeout' | tencent: TypeError: stock_zh_a_hist_tx() got an unexpected keywor",
-        "000002: eastmoney: TypeError: stock_zh_a_hist() got an unexpected keyword argument 'timeout' | tencent: TypeError: stock_zh_a_hist_tx() got an unexpected keywor",
-        "000063: eastmoney: TypeError: stock_zh_a_hist() got an unexpected keyword argument 'timeout' | tencent: TypeError: stock_zh_a_hist_tx() got an unexpected keywor",
-        "000100: eastmoney: TypeError: stock_zh_a_hist() got an unexpected keyword argument 'timeout' | tencent: TypeError: stock_zh_a_hist_tx() got an unexpected keywor",
-        "000157: eastmoney: TypeError: stock_zh_a_hist() got an unexpected keyword argument 'timeout' | tencent: TypeError: stock_zh_a_hist_tx() got an unexpected keywor"
+        "000001: eastmoney: AttributeError: stock_zh_a_hist 已在 1.20.46 更名为 stock_zh_a_hist_em，请改用 ak.stock_zh_a_hist_em；参数与返回的列也可能有调整，用 ak.interface_info(\"stock_zh_a_his",
+        "000002: eastmoney: AttributeError: stock_zh_a_hist 已在 1.20.46 更名为 stock_zh_a_hist_em，请改用 ak.stock_zh_a_hist_em；参数与返回的列也可能有调整，用 ak.interface_info(\"stock_zh_a_his",
+        "000063: eastmoney: AttributeError: stock_zh_a_hist 已在 1.20.46 更名为 stock_zh_a_hist_em，请改用 ak.stock_zh_a_hist_em；参数与返回的列也可能有调整，用 ak.interface_info(\"stock_zh_a_his",
+        "000100: eastmoney: AttributeError: stock_zh_a_hist 已在 1.20.46 更名为 stock_zh_a_hist_em，请改用 ak.stock_zh_a_hist_em；参数与返回的列也可能有调整，用 ak.interface_info(\"stock_zh_a_his",
+        "000157: eastmoney: AttributeError: stock_zh_a_hist 已在 1.20.46 更名为 stock_zh_a_hist_em，请改用 ak.stock_zh_a_hist_em；参数与返回的列也可能有调整，用 ak.interface_info(\"stock_zh_a_his"
       ],
       "rows": 4083,
       "last": "2026-10-29"
