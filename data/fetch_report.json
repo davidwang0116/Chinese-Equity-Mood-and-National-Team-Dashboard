@@ -1,70 +1,70 @@
 {
   "indexes": {
     "ok": true,
-    "at": "2026-11-17T08:13:32",
-    "seconds": 34.7,
+    "at": "2026-11-18T07:47:07",
+    "seconds": 34.2,
     "info": {
       "csi300": {
         "source": "tencent",
-        "rows": 4095,
-        "last": "2026-11-16"
+        "rows": 4096,
+        "last": "2026-11-17"
       },
       "csi1000": {
         "source": "tencent",
-        "rows": 2937,
-        "last": "2026-11-16"
+        "rows": 2938,
+        "last": "2026-11-17"
       },
       "sse": {
         "source": "tencent",
-        "rows": 4095,
-        "last": "2026-11-16"
+        "rows": 4096,
+        "last": "2026-11-17"
       },
       "szse": {
         "source": "tencent",
-        "rows": 4095,
-        "last": "2026-11-16"
+        "rows": 4096,
+        "last": "2026-11-17"
       }
     }
   },
   "asset": {
     "ok": true,
-    "at": "2026-11-17T08:13:34",
-    "seconds": 2.0,
+    "at": "2026-11-18T07:47:09",
+    "seconds": 2.3,
     "info": {
       "source": "eastmoney-hfq",
-      "rows": 3517,
-      "last": "2026-11-17"
+      "rows": 3518,
+      "last": "2026-11-18"
     }
   },
   "qvix": {
     "ok": true,
-    "at": "2026-11-17T08:13:39",
-    "seconds": 5.0,
+    "at": "2026-11-18T07:47:37",
+    "seconds": 28.0,
     "info": {
       "source": "optbbs-300etf",
-      "rows": 1662,
-      "last": "2026-11-16"
+      "rows": 1663,
+      "last": "2026-11-17"
     }
   },
   "margin": {
     "ok": true,
-    "at": "2026-11-17T08:13:51",
-    "seconds": 12.0,
+    "at": "2026-11-18T07:51:37",
+    "seconds": 239.7,
     "info": {
-      "source": "eastmoney-all",
-      "rows": 3429,
-      "last": "2026-11-16"
+      "source": "sse-only",
+      "rows": 2000,
+      "last": "2026-11-17"
     }
   },
   "valuation": {
     "ok": true,
-    "at": "2026-11-17T08:14:00",
-    "seconds": 8.5,
+    "at": "2026-11-18T07:51:46",
+    "seconds": 8.7,
     "info": {
       "erp": {
         "source": "legulegu",
-        "rows": 5244,
-        "last": "2026-11-16"
+        "rows": 5245,
+        "last": "2026-11-17"
       },
       "pe": {
         "error": "'date'"
@@ -78,7 +78,7 @@
   },
   "high_low": {
     "ok": true,
-    "at": "2026-11-17T08:14:01",
+    "at": "2026-11-18T07:51:47",
     "seconds": 1.2,
     "info": {
       "source": "legulegu",
@@ -88,14 +88,14 @@
   },
   "market_flow": {
     "ok": false,
-    "at": "2026-11-17T08:14:01",
+    "at": "2026-11-18T07:51:47",
     "error": "AttributeError: stock_market_fund_flow 已在 1.20.45 更名为 stock_fund_flow_market_em，请改用 ak.stock_fund_flow_market_em；参数与返回的列也可能有调整，用 ak.interface_info(\"stock_fund_flow_market_em\") 查看。完整对照见 https://akshare.akfamily.xyz/changelog.html#changelog-rename",
     "last_ok": "2026-11-14T06:50:16"
   },
   "etf_daily": {
     "ok": true,
-    "at": "2026-11-17T08:14:18",
-    "seconds": 17.1,
+    "at": "2026-11-18T07:52:08",
+    "seconds": 20.8,
     "info": {
       "per_code": {
         "510300": "eastmoney",
@@ -111,28 +111,28 @@
         "588080": "eastmoney",
         "159915": "eastmoney"
       },
-      "rows": 34783,
-      "last": "2026-11-17"
+      "rows": 34795,
+      "last": "2026-11-18"
     }
   },
   "etf_shares": {
     "ok": true,
-    "at": "2026-11-17T08:15:06",
-    "seconds": 47.9,
+    "at": "2026-11-18T07:52:50",
+    "seconds": 42.5,
     "info": {
       "spot_rows": 4,
-      "spot_label": "2026-11-16",
-      "sse_backfilled_days": 2,
+      "spot_label": "2026-11-17",
+      "sse_backfilled_days": 1,
       "sse_remaining": 0,
       "sse_errors": [],
-      "rows": 7528,
-      "last": "2026-11-16"
+      "rows": 7540,
+      "last": "2026-11-17"
     }
   },
   "breadth": {
     "ok": true,
-    "at": "2026-11-17T08:46:26",
-    "seconds": 1880.6,
+    "at": "2026-11-18T08:24:09",
+    "seconds": 1878.2,
     "info": {
       "source": "csindex",
       "constituents": 300,
