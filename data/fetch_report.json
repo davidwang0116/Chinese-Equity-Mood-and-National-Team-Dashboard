@@ -1,138 +1,137 @@
 {
   "indexes": {
     "ok": true,
-    "at": "2026-11-18T07:47:07",
-    "seconds": 34.2,
+    "at": "2026-11-19T07:43:20",
+    "seconds": 30.3,
     "info": {
       "csi300": {
         "source": "tencent",
-        "rows": 4096,
-        "last": "2026-11-17"
+        "rows": 4097,
+        "last": "2026-11-18"
       },
       "csi1000": {
         "source": "tencent",
-        "rows": 2938,
-        "last": "2026-11-17"
+        "rows": 2939,
+        "last": "2026-11-18"
       },
       "sse": {
         "source": "tencent",
-        "rows": 4096,
-        "last": "2026-11-17"
+        "rows": 4097,
+        "last": "2026-11-18"
       },
       "szse": {
         "source": "tencent",
-        "rows": 4096,
-        "last": "2026-11-17"
+        "rows": 4097,
+        "last": "2026-11-18"
       }
     }
   },
   "asset": {
     "ok": true,
-    "at": "2026-11-18T07:47:09",
-    "seconds": 2.3,
+    "at": "2026-11-19T07:43:29",
+    "seconds": 8.5,
     "info": {
       "source": "eastmoney-hfq",
-      "rows": 3518,
-      "last": "2026-11-18"
+      "rows": 3519,
+      "last": "2026-11-19"
     }
   },
   "qvix": {
     "ok": true,
-    "at": "2026-11-18T07:47:37",
-    "seconds": 28.0,
+    "at": "2026-11-19T07:43:39",
+    "seconds": 10.9,
     "info": {
       "source": "optbbs-300etf",
-      "rows": 1663,
-      "last": "2026-11-17"
+      "rows": 1664,
+      "last": "2026-11-18"
     }
   },
   "margin": {
     "ok": true,
-    "at": "2026-11-18T07:51:37",
-    "seconds": 239.7,
+    "at": "2026-11-19T07:43:51",
+    "seconds": 12.0,
     "info": {
-      "source": "sse-only",
-      "rows": 2000,
-      "last": "2026-11-17"
+      "source": "eastmoney-all",
+      "rows": 3431,
+      "last": "2026-11-18"
     }
   },
   "valuation": {
     "ok": true,
-    "at": "2026-11-18T07:51:46",
-    "seconds": 8.7,
+    "at": "2026-11-19T07:43:59",
+    "seconds": 7.8,
     "info": {
       "erp": {
         "source": "legulegu",
-        "rows": 5245,
-        "last": "2026-11-17"
+        "rows": 5246,
+        "last": "2026-11-18"
       },
       "pe": {
         "error": "'date'"
       },
       "congestion": {
         "source": "legulegu",
-        "rows": 3684,
-        "last": "2026-11-17"
+        "rows": 3685,
+        "last": "2026-11-18"
       }
     }
   },
   "high_low": {
     "ok": true,
-    "at": "2026-11-18T07:51:47",
+    "at": "2026-11-19T07:44:00",
     "seconds": 1.2,
     "info": {
       "source": "legulegu",
       "rows": 500,
-      "last": "2026-11-17"
+      "last": "2026-11-18"
     }
   },
   "market_flow": {
     "ok": false,
-    "at": "2026-11-18T07:51:47",
+    "at": "2026-11-19T07:44:00",
     "error": "AttributeError: stock_market_fund_flow 已在 1.20.45 更名为 stock_fund_flow_market_em，请改用 ak.stock_fund_flow_market_em；参数与返回的列也可能有调整，用 ak.interface_info(\"stock_fund_flow_market_em\") 查看。完整对照见 https://akshare.akfamily.xyz/changelog.html#changelog-rename",
     "last_ok": "2026-11-14T06:50:16"
   },
   "etf_daily": {
     "ok": true,
-    "at": "2026-11-18T07:52:08",
-    "seconds": 20.8,
+    "at": "2026-11-19T07:46:33",
+    "seconds": 152.7,
     "info": {
       "per_code": {
-        "510300": "eastmoney",
-        "510310": "eastmoney",
-        "510330": "eastmoney",
-        "159919": "eastmoney",
-        "510050": "eastmoney",
-        "510500": "eastmoney",
-        "159922": "eastmoney",
-        "512100": "eastmoney",
-        "159845": "eastmoney",
-        "588000": "eastmoney",
-        "588080": "eastmoney",
-        "159915": "eastmoney"
+        "510300": "sina",
+        "510310": "sina",
+        "510330": "sina",
+        "159919": "sina",
+        "510050": "sina",
+        "510500": "sina",
+        "159922": "sina",
+        "512100": "sina",
+        "159845": "sina",
+        "588000": "sina",
+        "588080": "sina",
+        "159915": "sina"
       },
-      "rows": 34795,
+      "rows": 35981,
       "last": "2026-11-18"
     }
   },
   "etf_shares": {
     "ok": true,
-    "at": "2026-11-18T07:52:50",
-    "seconds": 42.5,
+    "at": "2026-11-19T07:47:07",
+    "seconds": 34.2,
     "info": {
-      "spot_rows": 4,
-      "spot_label": "2026-11-17",
+      "spot_error": "502 Server Error: Bad Gateway for url: https://push2delay.eastmoney.com/api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&wbp2u=%7C0%7C0%7C0%7Cweb&fid=f12&fs=b%3",
       "sse_backfilled_days": 1,
       "sse_remaining": 0,
       "sse_errors": [],
-      "rows": 7540,
-      "last": "2026-11-17"
+      "rows": 7548,
+      "last": "2026-11-18"
     }
   },
   "breadth": {
     "ok": true,
-    "at": "2026-11-18T08:24:09",
-    "seconds": 1878.2,
+    "at": "2026-11-19T08:18:25",
+    "seconds": 1878.0,
     "info": {
       "source": "csindex",
       "constituents": 300,
